@@ -1,5 +1,7 @@
-package LoginSystem;
 //Made by Pranav Kambhampati
+
+package LoginSystem;
+
 import javax.swing.*;
 import javax.swing.border.MatteBorder;
 import java.awt.*;
@@ -12,6 +14,8 @@ public class Login extends JFrame {
     private JLabel loginstatus = new JLabel();
     private JTextField unameentry = new JTextField();
     private JPasswordField passentry = new JPasswordField();
+
+    CredentialStore login = CredentialStore.getInstance();
 
 //Instead of using the SwingUI Designer, I'm hardcoding the UI so that it is also going to work for Night at the Museum's Flask Website
     public Login(){
@@ -56,13 +60,21 @@ public class Login extends JFrame {
         passentry.setFont(new Font("Lucida Grande", Font.BOLD,40));
         getContentPane().add(passentry);
 
-        JButton advancedbutton = new JButton("Advanced");
-        advancedbutton.setBounds(875,385,345,75);
-        advancedbutton.setForeground(Color.BLACK);
-        advancedbutton.setBackground(Color.ORANGE);
-        advancedbutton.setBorder(new MatteBorder(7,7,7,7,Color.WHITE));
-        advancedbutton.setFont(new Font("Lucida Grande", Font.BOLD,40));
-        getContentPane().add(advancedbutton);
+        JButton userdeletebutton = new JButton("Delete User");
+        userdeletebutton.setBounds(875,385,345,75);
+        userdeletebutton.setForeground(Color.BLACK);
+        userdeletebutton.setBackground(Color.ORANGE);
+        userdeletebutton.setBorder(new MatteBorder(7,7,7,7,Color.WHITE));
+        userdeletebutton.setFont(new Font("Lucida Grande", Font.BOLD,40));
+        getContentPane().add(userdeletebutton);
+        userdeletebutton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                System.out.println("Sup");
+                DeleteUser.main(null);
+            }
+        });
+
 
 //JButton is created to let users Login - No Functionality yet
         JButton loginbutton = new JButton("Login");
@@ -82,6 +94,15 @@ public class Login extends JFrame {
                     loginstatus.setText("You're in!");
                     //Part of the sequence to opening the panels correctly. More in other areas of the code.
                 } else {
+                    loginstatus.setText("Wrong Credentials!");
+                }
+                if(login.getUserPassword(username).equals(password)){
+                    loginstatus.setText("You're in!");
+                }
+                else if (username.equals("coderwithswag") && password.equals("Legit")){
+                    loginstatus.setText("You're in!");
+                }
+                else {
                     loginstatus.setText("Wrong Credentials!");
                 }
                 //control.verifier(username, password);
@@ -104,9 +125,8 @@ public class Login extends JFrame {
                 NewUser.main(null);
             }
         });
-
-
     }
+
 //Creating JFrame
     public static void main(String[] args) {
         Login frame = new Login();

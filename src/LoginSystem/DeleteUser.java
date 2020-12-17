@@ -8,17 +8,16 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-public class NewUser extends JFrame {
-
+public class DeleteUser extends JFrame {
     private JLabel unamelabel = new JLabel();
     private JLabel passlabel = new JLabel();
     private JTextField unameentry = new JTextField();
     private JPasswordField passentry = new JPasswordField();
 
-    CredentialStore newuser = CredentialStore.getInstance();
+    CredentialStore deluser = CredentialStore.getInstance();
 
 
-    public NewUser(){
+    public DeleteUser(){
         getContentPane().setBackground(Color.LIGHT_GRAY);
         setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         setBounds(300,300,1300,400);
@@ -47,29 +46,27 @@ public class NewUser extends JFrame {
         passentry.setFont(new Font("Lucida Grande", Font.BOLD,40));
         getContentPane().add(passentry);
 
-        JButton newuserbutton = new JButton("Create New User");
-        newuserbutton.setBounds(520,270,700,75);
-        newuserbutton.setForeground(Color.BLACK);
-        newuserbutton.setBackground(Color.ORANGE);
-        newuserbutton.setBorder(new MatteBorder(7,7,7,7,Color.WHITE));
-        newuserbutton.setFont(new Font("Lucida Grande", Font.BOLD,40));
-        getContentPane().add(newuserbutton);
+        JButton deluserbutton = new JButton("Delete Existing User");
+        deluserbutton.setBounds(520,270,700,75);
+        deluserbutton.setForeground(Color.BLACK);
+        deluserbutton.setBackground(Color.ORANGE);
+        deluserbutton.setBorder(new MatteBorder(7,7,7,7,Color.WHITE));
+        deluserbutton.setFont(new Font("Lucida Grande", Font.BOLD,40));
+        getContentPane().add(deluserbutton);
 
-        newuserbutton.addActionListener(new ActionListener() {
+        deluserbutton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 String usertemp = unameentry.getText();
                 String passtemp = passentry.getText();
-                newuser.addUserCredentials(usertemp, passtemp);
-                //newuser.addstackusername(usertemp);
-                //newuser.addqueuepassword(passtemp);
+                deluser.removeUserCredentials(usertemp, passtemp);
             }
         });
     }
 
     public static void main(String[] args) {
-        NewUser frame = new NewUser();
-        frame.setTitle("Create a New User Account");
+        DeleteUser frame = new DeleteUser();
+        frame.setTitle("Remove a User Account");
         frame.setVisible(true);
     }
 }
