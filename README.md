@@ -30,7 +30,7 @@ Link to Project Board (Scrum Board): [LINK](https://github.com/aryan114/Gators-C
 
 | Member | Score |
 | --- | --- |
-| Pranav | asdf |
+| Pranav | For Critical Thinking, I was able to achieve coding goals (with hashmaps) I set for myself and I also experimented with DynamoDb, like making tables. For Communications and Presentations, I achieved goals from scrum board and added comments to communicate ideas. For Collaboration, I worked with Aryan on some AWS settings, and discussed with my team on what I need to do. For creativity, worked with JFrames, trying to make them look unique. Total score: 19/20.  |
 | Pranav Links | asdf |
 | Aryan | asdf |
 | Aryan Links | asdf |
