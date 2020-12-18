@@ -30,8 +30,8 @@ Link to Project Board (Scrum Board): [LINK](https://github.com/aryan114/Gators-C
 
 | Member | Score |
 | --- | --- |
-| Pranav | asdf |
-| Pranav Links | asdf |
+| Pranav | For Critical Thinking, I was able to achieve coding goals (with hashmaps) I set for myself and I also experimented with DynamoDB. For Communications and Presentations, I achieved goals from scrum board and added comments to communicate ideas. For Collaboration, I worked with Aryan on some AWS settings, and discussed with my team on what I need to do. For creativity, I worked with JFrames, trying to make them look unique. Total score: 19/20.  |
+| Pranav Links | [Experimenting with DynamoDB](https://github.com/aryan114/Gators-CSA-Trimester-2/blob/d0a8258e0d7ab99feb4e2267d316e89d8d0357dd/src/Images/DynamoDB%20Table.JPG);; [Working with JFrames](https://github.com/aryan114/Gators-CSA-Trimester-2/blob/d0a8258e0d7ab99feb4e2267d316e89d8d0357dd/src/LoginSystem/Login.java#L134);; [Finishing Set Goals](https://github.com/aryan114/Gators-CSA-Trimester-2/projects/1);; [Singleton Classes Experimentation](https://github.com/aryan114/Gators-CSA-Trimester-2/blob/d0a8258e0d7ab99feb4e2267d316e89d8d0357dd/src/LoginSystem/CredentialStore.java#L18) |
 | Aryan | asdf |
 | Aryan Links | asdf |
 | Praveen | asdf |
