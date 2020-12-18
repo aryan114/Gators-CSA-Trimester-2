@@ -1,4 +1,5 @@
 //Made by Pranav Kambhampati
+//File Works, but need to connect to AWS DynamoDB (sending credentials to table and reading them)
 
 package LoginSystem;
 
@@ -67,6 +68,7 @@ public class Login extends JFrame {
         userdeletebutton.setBorder(new MatteBorder(7,7,7,7,Color.WHITE));
         userdeletebutton.setFont(new Font("Lucida Grande", Font.BOLD,40));
         getContentPane().add(userdeletebutton);
+        //Event Based Programming: Waiting for a specific event to happen (buttonclick in this case)
         userdeletebutton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -85,6 +87,7 @@ public class Login extends JFrame {
         loginbutton.setFont(new Font("Lucida Grande", Font.BOLD,40));
         getContentPane().add(loginbutton);
 
+        //Event Based Programming: Waiting for a specific event to happen (buttonclick in this case)
         loginbutton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -119,6 +122,7 @@ public class Login extends JFrame {
         newuserbutton.setFont(new Font("Lucida Grande", Font.BOLD,40));
         getContentPane().add(newuserbutton);
 
+        //Event Based Programming: Waiting for a specific event to happen (buttonclick in this case)
         newuserbutton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
