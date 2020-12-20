@@ -32,11 +32,11 @@ public class Sports extends JFrame {
         getContentPane().add(team2);
 
         team1entry.setBounds(750,10,500,100);
-        team1entry.setForeground(Color.WHITE);
+        team1entry.setForeground(Color.BLACK);
         getContentPane().add(team1entry);
 
         team2entry.setBounds(750,120,500,100);
-        team2entry.setForeground(Color.WHITE);
+        team2entry.setForeground(Color.BLACK);
         getContentPane().add(team2entry);
 
         calculate.setBounds(520,270,700,75);

@@ -42,6 +42,9 @@ public class SportsStats extends JFrame {
     private JLabel NYG;
     private JLabel WFT;
 
+    public SportsStats() {
+
+    }
 // Hi
 
 }

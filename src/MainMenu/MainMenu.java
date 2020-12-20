@@ -1,9 +1,14 @@
 package MainMenu;
-// Made by Aryan Amberkar
+// Made by Aryan Amberkar, taken with help from previous project
 
 import javax.swing.*;
 import Sports.Sports;
 import LoginSystem.*;
+import java.awt.image.BufferedImage;
+import javax.imageio.ImageIO;
+import java.io.File;
+import java.io.IOException;
+
 
 import java.awt.*;
 
@@ -22,7 +27,7 @@ public class MainMenu extends JFrame {
         });
     }
 
-    public MainMenu() {
+    public MainMenu() throws IOException {
 
         // Adding Gators logo to main menu
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -34,6 +39,7 @@ public class MainMenu extends JFrame {
         Container GatorLogo = getContentPane();
         GatorLogo.setBackground(new Color(4, 106, 56));
         GatorLogo.add(image);
+
 
         // Adding menu bars to the main menu
         JMenuBar projects = new JMenuBar();
