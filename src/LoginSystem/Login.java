@@ -24,7 +24,7 @@ public class Login extends JFrame {
         setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         setBounds(300,300,1300,550);
         //To make this look better, I'm going to try setting an icon image later
-        setContentPane(new JLabel(new ImageIcon("C:\\Users\\Pranav\\Downloads\\coding4kidspp.png")));
+        //setContentPane(new JLabel(new ImageIcon("C:\\Users\\Pranav\\Downloads\\coding4kidspp.png")));
         //setSize(1300,550);
 
 //Creating the Username: and Password: JLabels
