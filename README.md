@@ -28,6 +28,8 @@ Link to Project Board (Scrum Board): [LINK](https://github.com/aryan114/Gators-C
 
 ### Self-Scoring For Week of 12/14
 
+Focus on creating individual games. Integration of projects will take place once all individual games are complete.
+
 | Member | Score |
 | --- | --- |
 | Pranav | **Critical Thinking**- I achieved coding goals (with hashmaps) and experimented with DynamoDB, but I need to spend more time on this. **Communications and Presentations**- I achieved goals from scrum board and added comments to communicate ideas with peers. **Collaboration**- I worked with Aryan on some AWS settings, and discussed with my team on what I need to do. **Creativity**- I worked with JFrames to make them look unique but I could have done more. **Total score: 19/20.**  |
