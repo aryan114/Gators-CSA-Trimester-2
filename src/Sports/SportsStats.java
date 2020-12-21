@@ -6,6 +6,8 @@ import javax.swing.border.MatteBorder;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.io.IOException;
+
 // Hi
 public class SportsStats extends JFrame {
 
@@ -42,6 +44,8 @@ public class SportsStats extends JFrame {
     private JLabel NYG;
     private JLabel WFT;
 
-// Hi
+    public SportsStats() {
+
+    }
 
 }
