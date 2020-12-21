@@ -30,6 +30,14 @@ Link to Project Board (Scrum Board): [LINK](https://github.com/aryan114/Gators-C
 
 Focus on creating individual games. Integration of projects will take place once all individual games are complete.
 
+Pranav: 23/25
+
+Aryan: 23/25
+
+Praveen: 23/25
+
+Neil: 23/25
+
 | Member | Score |
 | --- | --- |
 | Pranav | **Critical Thinking**- I achieved coding goals (with hashmaps) and experimented with DynamoDB, but I need to spend more time on this. **Communications and Presentations**- I achieved goals from scrum board and added comments to communicate ideas with peers. **Collaboration**- I worked with Aryan on some AWS settings, and discussed with my team on what I need to do. **Creativity**- I worked with JFrames to make them look unique but I could have done more. **Self score: 19/20.**  |
