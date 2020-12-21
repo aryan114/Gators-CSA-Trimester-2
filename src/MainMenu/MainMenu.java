@@ -2,6 +2,9 @@ package MainMenu;
 // Made by Aryan Amberkar, taken with help from previous project
 
 import javax.swing.*;
+
+import Eccomerce.Itemspage;
+import Snake.Snake;
 import Sports.Sports;
 import LoginSystem.*;
 import java.awt.image.BufferedImage;
@@ -62,6 +65,13 @@ public class MainMenu extends JFrame {
             frame.setVisible(true);
         });
         labs.add(LoginStuff);
+
+        JMenuItem Ecommerce = new JMenuItem("Ecommerce Store");
+        Ecommerce.addActionListener(e ->  {
+            Itemspage frame = new Itemspage();
+            frame.setVisible(true);
+        });
+        labs.add(Ecommerce);
 
     }
 }
