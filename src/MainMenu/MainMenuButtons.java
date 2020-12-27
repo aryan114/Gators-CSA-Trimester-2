@@ -6,6 +6,7 @@ package MainMenu;
 import Eccomerce.Itemspage;
 import LoginSystem.Login;
 import LoginSystem.NewUser;
+import Snake.Snake;
 import Sports.Sports;
 
 import javax.swing.*;
@@ -47,14 +48,13 @@ public class MainMenuButtons extends JFrame {
         snakegame.setBorder(new MatteBorder(7,7,7,7,Color.WHITE));
         snakegame.setFont(new Font("Lucida Grande", Font.BOLD,40));
         getContentPane().add(snakegame);
-       /*
+
         snakegame.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                NewUser.main(null);
+                Snake.main(null);
             }
         });
-        */
         //What is the actual snake game file?
         
         JButton sportssim = new JButton("Sports Sim");
