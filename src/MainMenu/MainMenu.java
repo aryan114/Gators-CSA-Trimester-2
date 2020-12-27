@@ -1,5 +1,7 @@
 package MainMenu;
 // Made by Aryan Amberkar, taken with help from previous project
+//Gators Image from Aryan, added to JFrame by Pranav
+//This file uses the JMenuBar method to display options
 
 import javax.swing.*;
 
@@ -42,6 +44,8 @@ public class MainMenu extends JFrame {
         Container GatorLogo = getContentPane();
         GatorLogo.setBackground(new Color(4, 106, 56));
         GatorLogo.add(image);
+        setContentPane(new JLabel(new ImageIcon("D:\\Java Projects\\out\\production\\TheGators-Trimester2-CSA\\src\\Images\\GatorsImage.png")));
+
 
 
         // Adding menu bars to the main menu
@@ -72,6 +76,15 @@ public class MainMenu extends JFrame {
             frame.setVisible(true);
         });
         labs.add(Ecommerce);
+/*
+        JMenuItem Snakegame = new JMenuItem("Snake Game");
+        Snakegame.addActionListener(e ->  {
+            Snake frame = new Snake();
+            frame.setVisible(true);
+        });
+        labs.add(Snakegame);
+        
+ */
 
     }
 }
