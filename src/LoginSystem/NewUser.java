@@ -68,6 +68,7 @@ public class NewUser extends JFrame {
                 newuser.addUserCredentials(usertemp, passtemp);
                 //newuser.addstackusername(usertemp);
                 //newuser.addqueuepassword(passtemp);
+                setVisible(false);
             }
         });
     }

@@ -1,5 +1,6 @@
 //Created by Pranav Kambhampati
 //This file uses JButtons to allow the user to display options
+//Runs all labs
 
 package MainMenu;
 
@@ -20,7 +21,7 @@ public class MainMenuButtons extends JFrame {
     public MainMenuButtons(){
         getContentPane().setBackground(Color.LIGHT_GRAY);
         setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
-        setBounds(300,300,1000,1000);
+        setBounds(150,25,1000,1000);
         setContentPane(new JLabel(new ImageIcon("D:\\Java Projects\\out\\production\\TheGators-Trimester2-CSA\\src\\Images\\GatorsImage.png")));
         //Adding an image to the background to make the project more customized to our group
         
@@ -55,7 +56,7 @@ public class MainMenuButtons extends JFrame {
                 Snake.main(null);
             }
         });
-        //What is the actual snake game file?
+
         
         JButton sportssim = new JButton("Sports Sim");
         sportssim.setBounds(325,525,350,350);

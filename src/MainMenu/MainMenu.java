@@ -1,3 +1,5 @@
+//Can we get rid of this file since it can't run the SnakeGame?
+
 package MainMenu;
 // Made by Aryan Amberkar, taken with help from previous project
 //Gators Image from Aryan, added to JFrame by Pranav

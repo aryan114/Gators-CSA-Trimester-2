@@ -99,16 +99,19 @@ public class Login extends JFrame {
                     loginstatus.setText("You're in!");
                     MainMenuButtons.main(null);
                     //Part of the sequence to opening the panels correctly. More in other areas of the code.
+                    setVisible(false);
                 } else {
                     loginstatus.setText("Wrong Credentials!");
                 }
                 if(login.getUserPassword(username).equals(password)){
                     loginstatus.setText("You're in!");
                     MainMenuButtons.main(null);
+                    setVisible(false);
                 }
                 else if (username.equals("coderwithswag") && password.equals("Legit")){
                     loginstatus.setText("You're in!");
                     MainMenuButtons.main(null);
+                    setVisible(false);
                 }
                 else {
                     loginstatus.setText("Wrong Credentials!");
