@@ -73,5 +73,12 @@ public class MainMenu extends JFrame {
         });
         labs.add(Ecommerce);
 
+        //JMenuItem SnakeGame = new JMenuItem("Snake Game");
+        //SnakeGame.addActionListener(e ->  {
+            //Snake.SnakeFram frame = new Snake();
+            //frame.setVisible(true);
+                }
+                //);
+
     }
-}
+
