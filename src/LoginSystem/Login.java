@@ -3,11 +3,14 @@
 
 package LoginSystem;
 
+import MainMenu.MainMenuButtons;
+
 import javax.swing.*;
 import javax.swing.border.MatteBorder;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+
 
 public class Login extends JFrame {
     private JLabel unamelabel = new JLabel();
@@ -95,15 +98,21 @@ public class Login extends JFrame {
                 String password = passentry.getText();
                 if (username.equals("coderwithswag") && password.equals("Legit")) {
                     loginstatus.setText("You're in!");
+                    MainMenuButtons.main(null);
                     //Part of the sequence to opening the panels correctly. More in other areas of the code.
+                    setVisible(false);
                 } else {
                     loginstatus.setText("Wrong Credentials!");
                 }
                 if(login.getUserPassword(username).equals(password)){
                     loginstatus.setText("You're in!");
+                    MainMenuButtons.main(null);
+                    setVisible(false);
                 }
                 else if (username.equals("coderwithswag") && password.equals("Legit")){
                     loginstatus.setText("You're in!");
+                    MainMenuButtons.main(null);
+                    setVisible(false);
                 }
                 else {
                     loginstatus.setText("Wrong Credentials!");
@@ -133,6 +142,9 @@ public class Login extends JFrame {
 
 //Creating JFrame
     public static void main(String[] args) {
+
+
+
         Login frame = new Login();
         frame.setTitle("Login To Your Account");
         frame.setVisible(true);

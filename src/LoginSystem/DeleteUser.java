@@ -63,6 +63,7 @@ public class DeleteUser extends JFrame {
                 String usertemp = unameentry.getText();
                 String passtemp = passentry.getText();
                 deluser.removeUserCredentials(usertemp, passtemp);
+                setVisible(false);
             }
         });
     }

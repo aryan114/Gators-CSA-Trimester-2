@@ -4,6 +4,14 @@
 
 package LoginSystem;
 
+import com.amazonaws.client.builder.AwsClientBuilder;
+import com.amazonaws.services.dynamodbv2.AmazonDynamoDB;
+import com.amazonaws.services.dynamodbv2.AmazonDynamoDBClientBuilder;
+import com.amazonaws.services.dynamodbv2.document.DynamoDB;
+import com.amazonaws.services.dynamodbv2.document.Item;
+import com.amazonaws.services.dynamodbv2.document.PutItemOutcome;
+import com.amazonaws.services.dynamodbv2.document.Table;
+
 import java.util.HashMap;
 import java.util.LinkedList;
 import java.util.Queue;
@@ -50,6 +58,27 @@ public class CredentialStore {
 
     public void addUserCredentials(String userName, String password) {
         userCredentials.put(userName, password);
+        AmazonDynamoDB client = AmazonDynamoDBClientBuilder.standard()
+                .withEndpointConfiguration(new AwsClientBuilder.EndpointConfiguration("dynamodb.us-east-2.amazonaws.com", "us-east-2"))
+                .build();
+//"http://localhost:8000", "us-east-2"
+
+        DynamoDB dynamoDB = new DynamoDB(client);
+
+        Table table = dynamoDB.getTable("Credentials");
+
+        try {
+            System.out.println("Adding a new item...");
+            PutItemOutcome outcome = table
+                    .putItem(new Item().withPrimaryKey("userName", userName).with( "password", password));
+            //.withMap("UserCredentials", userCredentials));
+            System.out.println("PutItem succeeded:\n" + outcome.getPutItemResult());
+
+        }
+        catch (Exception e) {
+            System.err.println("Unable to add item: " + userName + " " + password);
+            System.err.println(e.getMessage());
+        }
     }
 
     public void removeUserCredentials(String userName, String password){

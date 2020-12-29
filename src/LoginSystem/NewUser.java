@@ -4,6 +4,16 @@
 
 package LoginSystem;
 
+import com.amazonaws.client.builder.AwsClientBuilder;
+import com.amazonaws.services.dynamodbv2.AmazonDynamoDB;
+import com.amazonaws.services.dynamodbv2.AmazonDynamoDBClientBuilder;
+import com.amazonaws.services.dynamodbv2.document.DynamoDB;
+import com.amazonaws.services.dynamodbv2.document.Item;
+import com.amazonaws.services.dynamodbv2.document.PutItemOutcome;
+import com.amazonaws.services.dynamodbv2.document.Table;
+//import boto3;
+
+
 import javax.swing.*;
 import javax.swing.border.MatteBorder;
 import java.awt.*;
@@ -68,6 +78,12 @@ public class NewUser extends JFrame {
                 newuser.addUserCredentials(usertemp, passtemp);
                 //newuser.addstackusername(usertemp);
                 //newuser.addqueuepassword(passtemp);
+                setVisible(false);
+
+                System.out.println("New User");
+
+
+
             }
         });
     }
@@ -76,5 +92,9 @@ public class NewUser extends JFrame {
         NewUser frame = new NewUser();
         frame.setTitle("Create a New User Account");
         frame.setVisible(true);
+
+
+
+
     }
 }
