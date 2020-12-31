@@ -20,7 +20,7 @@ public class MainMenuButtons extends JFrame {
 
     public MainMenuButtons(){
         getContentPane().setBackground(Color.LIGHT_GRAY);
-        setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setBounds(150,25,1000,1000);
         setContentPane(new JLabel(new ImageIcon("D:\\Java Projects\\out\\production\\TheGators-Trimester2-CSA\\src\\Images\\GatorsImage.png")));
         //Adding an image to the background to make the project more customized to our group

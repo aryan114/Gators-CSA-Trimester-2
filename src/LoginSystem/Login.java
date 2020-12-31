@@ -5,11 +5,40 @@ package LoginSystem;
 
 import MainMenu.MainMenuButtons;
 
+import com.amazonaws.client.builder.AdvancedConfig;
+import com.amazonaws.client.builder.AwsClientBuilder;
+import com.amazonaws.services.dynamodbv2.AmazonDynamoDB;
+import com.amazonaws.services.dynamodbv2.AmazonDynamoDBClientBuilder;
+import com.amazonaws.services.dynamodbv2.document.*;
+import com.amazonaws.services.dynamodbv2.document.spec.QuerySpec;
+import com.amazonaws.services.dynamodbv2.document.utils.ValueMap;
+import com.amazonaws.services.dynamodbv2.model.AttributeValue;
+import com.amazonaws.services.dynamodbv2.model.GetItemRequest;
+import com.amazonaws.services.dynamodbv2.model.GetItemResult;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.Iterator;
+
+import com.amazonaws.services.dynamodbv2.AmazonDynamoDB;
+import com.amazonaws.services.dynamodbv2.AmazonDynamoDBClientBuilder;
+import com.amazonaws.services.dynamodbv2.document.DynamoDB;
+import com.amazonaws.services.dynamodbv2.document.Item;
+import com.amazonaws.services.dynamodbv2.document.ItemCollection;
+import com.amazonaws.services.dynamodbv2.document.Page;
+import com.amazonaws.services.dynamodbv2.document.QueryOutcome;
+import com.amazonaws.services.dynamodbv2.document.Table;
+import com.amazonaws.services.dynamodbv2.document.spec.QuerySpec;
+import com.amazonaws.services.dynamodbv2.document.utils.ValueMap;
+
 import javax.swing.*;
 import javax.swing.border.MatteBorder;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Iterator;
+import java.util.Map;
 
 
 public class Login extends JFrame {
@@ -75,13 +104,11 @@ public class Login extends JFrame {
         userdeletebutton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                System.out.println("Sup");
                 DeleteUser.main(null);
             }
         });
 
 
-//JButton is created to let users Login - No Functionality yet
         JButton loginbutton = new JButton("Login");
         loginbutton.setBounds(520,270,700,75);
         loginbutton.setForeground(Color.BLACK);
@@ -96,6 +123,28 @@ public class Login extends JFrame {
             public void actionPerformed(ActionEvent e) {
                 String username = unameentry.getText();
                 String password = passentry.getText();
+
+
+                AmazonDynamoDB client = AmazonDynamoDBClientBuilder.standard()
+                        .withEndpointConfiguration(new AwsClientBuilder.EndpointConfiguration("dynamodb.us-east-2.amazonaws.com", "us-east-2"))
+                        .build();
+                DynamoDB dynamoDB = new DynamoDB(client);
+                Table table = dynamoDB.getTable("Credentials");
+
+                QuerySpec spec = new QuerySpec().withKeyConditionExpression("userName= :v_username and password= :v_password")
+                        .withValueMap(new ValueMap().withString(":v_username", username).withString(":v_password",password));
+
+                ItemCollection<QueryOutcome> items = table.query(spec);
+
+                System.out.println("\nfindRepliesForAThread results:");
+
+                Iterator<Item> iterator = items.iterator();
+                while (iterator.hasNext()) {
+                    //System.out.println(iterator.next());
+                    System.out.println(iterator.next().toJSONPretty());
+                }
+
+
                 if (username.equals("coderwithswag") && password.equals("Legit")) {
                     loginstatus.setText("You're in!");
                     MainMenuButtons.main(null);
@@ -104,11 +153,11 @@ public class Login extends JFrame {
                 } else {
                     loginstatus.setText("Wrong Credentials!");
                 }
-                if(login.getUserPassword(username).equals(password)){
+                if(items.getAccumulatedItemCount()>0){
                     loginstatus.setText("You're in!");
                     MainMenuButtons.main(null);
                     setVisible(false);
-                }
+                }//login.getUserPassword(username)
                 else if (username.equals("coderwithswag") && password.equals("Legit")){
                     loginstatus.setText("You're in!");
                     MainMenuButtons.main(null);
@@ -142,8 +191,6 @@ public class Login extends JFrame {
 
 //Creating JFrame
     public static void main(String[] args) {
-
-
 
         Login frame = new Login();
         frame.setTitle("Login To Your Account");
