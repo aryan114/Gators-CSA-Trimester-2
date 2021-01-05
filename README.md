@@ -28,6 +28,8 @@ Link to Project Board (Scrum Board): [LINK](https://github.com/aryan114/Gators-C
 
 ### Self-Scoring For Week of 12/14
 
+Scores Document: [LINK](https://docs.google.com/document/d/1oFAnKWs5ejNb9_9eBUfHD7GJ7SrVmtfSk_sDv3WUNb8/edit)
+
 Focus on creating individual games. Integration of projects will take place once all individual games are complete.
 
 Pranav: 23/25
