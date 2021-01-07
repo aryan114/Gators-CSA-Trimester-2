@@ -56,599 +56,269 @@ public class Sports extends JFrame {
                 String teamOne = team1entry.getText();
                 String teamTwo = team2entry.getText();
 
-                int teamUno;
-                if (teamOne.contains("ravens")) {
-                        teamUno = 25;
-                    }
-                    if (teamOne.contains("steelers")) {
-                        teamUno = 20;
-                    }
-                 
-                if (teamTwo.contains("steelers")) {
-                    teamDos = 20;
-                }
-/*
-                if (teamOne.contains("ravens")) {
-                    teamUno = 25;
-                    if (teamUno > teamDos) {
-                        winner.setText(teamOne + " is the winner!");
-                    }
-                    else if (teamDos > teamUno) {
-                        winner.setText(teamTwo + " is the winner!");
-                    }
-                }
 
+                while (true) {
+                    if (teamOne.contains("ravens")) {
+                        int teamUno = 25;
+                    } else if (teamOne.contains("steelers")) {
+                        int teamUno = 20;
+                    } else if (teamOne.contains("browns")) {
+                        int teamUno = 17;
+                    } else if (teamOne.contains("bengals")) {
+                        int teamUno = 6;
+                    }
+                }
 
                 if (teamTwo.contains("ravens")) {
                      teamDos = 25;
-                    if (teamUno > teamDos) {
-                        winner.setText(teamOne + " is the winner!");
-                    }
-                    else if (teamDos > teamUno) {
-                        winner.setText(teamTwo + " is the winner!");
-                    }
                 }
-                if (teamOne.contains("steelers")) {
-                     teamUno = 20;
-                    if (teamUno > teamDos) {
-                        winner.setText(teamOne + " is the winner!");
-                    }
-                    else if (teamDos > teamUno) {
-                        winner.setText(teamTwo + " is the winner!");
-                    }
-                }
-                if (teamTwo.contains("steelers")) {
+                else if (teamTwo.contains("steelers")) {
                      teamDos = 20;
-                    if (teamUno > teamDos) {
-                        winner.setText(teamOne + " is the winner!");
-                    }
-                    else if (teamDos > teamUno) {
-                        winner.setText(teamTwo + " is the winner!");
-                    }
+                    
                 }
-                if (teamOne.contains("browns")) {
+                else if (teamOne.contains("browns")) {
                      teamUno = 17;
-                    if (teamUno > teamDos) {
-                        winner.setText(teamOne + " is the winner!");
-                    }
-                    else if (teamDos > teamUno) {
-                        winner.setText(teamTwo + " is the winner!");
-                    }
+                    
                 }
-                if (teamTwo.contains("browns")) {
+                else if (teamTwo.contains("browns")) {
                      teamDos = 17;
-                    if (teamUno > teamDos) {
-                        winner.setText(teamOne + " is the winner!");
-                    }
-                    else if (teamDos > teamUno) {
-                        winner.setText(teamTwo + " is the winner!");
-                    }
+                    
                 }
-                if (teamOne.contains("bengals")) {
+                else if (teamOne.contains("bengals")) {
                      teamUno = 6;
-                    if (teamUno > teamDos) {
-                        winner.setText(teamOne + " is the winner!");
-                    }
-                    else if (teamDos > teamUno) {
-                        winner.setText(teamTwo + " is the winner!");
-                    }
+                    
                 }
-                if (teamTwo.contains("bengals")) {
+                else if (teamTwo.contains("bengals")) {
                      teamDos = 6;
-                    if (teamUno > teamDos) {
-                        winner.setText(teamOne + " is the winner!");
-                    }
-                    else if (teamDos > teamUno) {
-                        winner.setText(teamTwo + " is the winner!");
-                    }
+                    
                 }
-                if (teamOne.contains("patriots")) {
+                else if (teamOne.contains("patriots")) {
                      teamUno = 19;
-                    if (teamUno > teamDos) {
-                        winner.setText(teamOne + " is the winner!");
-                    }
-                    else if (teamDos > teamUno) {
-                        winner.setText(teamTwo + " is the winner!");
-                    }
+                    
                 }
-                if (teamTwo.contains("patriots")) {
+                else if (teamTwo.contains("patriots")) {
                      teamDos = 19;
-                    if (teamUno > teamDos) {
-                        winner.setText(teamOne + " is the winner!");
-                    }
-                    else if (teamDos > teamUno) {
-                        winner.setText(teamTwo + " is the winner!");
-                    }
+                    
                 }
-                if (teamOne.contains("bills")) {
+                else if (teamOne.contains("bills")) {
                      teamUno = 22;
-                    if (teamUno > teamDos) {
-                        winner.setText(teamOne + " is the winner!");
-                    }
-                    else if (teamDos > teamUno) {
-                        winner.setText(teamTwo + " is the winner!");
-                    }
+                    
                 }
-                if (teamTwo.contains("bills")) {
+                else if (teamTwo.contains("bills")) {
                      teamDos = 22;
-                    if (teamUno > teamDos) {
-                        winner.setText(teamOne + " is the winner!");
-                    }
-                    else if (teamDos > teamUno) {
-                        winner.setText(teamTwo + " is the winner!");
-                    }
+                    
                 }
-                if (teamOne.contains("dolphins")) {
+                else if (teamOne.contains("dolphins")) {
                      teamUno = 15;
-                    if (teamUno > teamDos) {
-                        winner.setText(teamOne + " is the winner!");
-                    }
-                    else if (teamDos > teamUno) {
-                        winner.setText(teamTwo + " is the winner!");
-                    }
+                    
                 }
-                if (teamTwo.contains("dolphins")) {
+                else if (teamTwo.contains("dolphins")) {
                      teamDos = 15;
-                    if (teamUno > teamDos) {
-                        winner.setText(teamOne + " is the winner!");
-                    }
-                    else if (teamDos > teamUno) {
-                        winner.setText(teamTwo + " is the winner!");
-                    }
+                    
                 }
-                if (teamOne.contains("jets")) {
+                else if (teamOne.contains("jets")) {
                      teamUno = 9;
-                    if (teamUno > teamDos) {
-                        winner.setText(teamOne + " is the winner!");
-                    }
-                    else if (teamDos > teamUno) {
-                        winner.setText(teamTwo + " is the winner!");
-                    }
+                    
                 }
-                if (teamTwo.contains("jets")) {
+                else if (teamTwo.contains("jets")) {
                      teamDos = 9;
-                    if (teamUno > teamDos) {
-                        winner.setText(teamOne + " is the winner!");
-                    }
-                    else if (teamDos > teamUno) {
-                        winner.setText(teamTwo + " is the winner!");
-                    }
+                    
                 }
-                if (teamOne.contains("chiefs")) {
+                else if (teamOne.contains("chiefs")) {
                      teamUno = 29;
-                    if (teamUno > teamDos) {
-                        winner.setText(teamOne + " is the winner!");
-                    }
-                    else if (teamDos > teamUno) {
-                        winner.setText(teamTwo + " is the winner!");
-                    }
+                    
                 }
-                if (teamTwo.contains("chiefs")) {
+                else if (teamTwo.contains("chiefs")) {
                      teamDos = 29;
-                    if (teamUno > teamDos) {
-                        winner.setText(teamOne + " is the winner!");
-                    }
-                    else if (teamDos > teamUno) {
-                        winner.setText(teamTwo + " is the winner!");
-                    }
+                    
                 }
-                if (teamOne.contains("chargers")) {
+                else if (teamOne.contains("chargers")) {
                      teamUno = 12;
-                    if (teamUno > teamDos) {
-                        winner.setText(teamOne + " is the winner!");
-                    }
-                    else if (teamDos > teamUno) {
-                        winner.setText(teamTwo + " is the winner!");
-                    }
+                    
                 }
-                if (teamTwo.contains("chargers")) {
+                else if (teamTwo.contains("chargers")) {
                      teamDos = 12;
-                    if (teamUno > teamDos) {
-                        winner.setText(teamOne + " is the winner!");
-                    }
-                    else if (teamDos > teamUno) {
-                        winner.setText(teamTwo + " is the winner!");
-                    }
+                    
                 }
-                if (teamOne.contains("raiders")) {
+                else if (teamOne.contains("raiders")) {
                      teamUno = 15;
-                    if (teamUno > teamDos) {
-                        winner.setText(teamOne + " is the winner!");
-                    }
-                    else if (teamDos > teamUno) {
-                        winner.setText(teamTwo + " is the winner!");
-                    }
+                    
                 }
-                if (teamTwo.contains("raiders")) {
+                else if (teamTwo.contains("raiders")) {
                      teamDos = 15;
-                    if (teamUno > teamDos) {
-                        winner.setText(teamOne + " is the winner!");
-                    }
-                    else if (teamDos > teamUno) {
-                        winner.setText(teamTwo + " is the winner!");
-                    }
+                    
                 }
-                if (teamOne.contains("broncos")) {
+                else if (teamOne.contains("broncos")) {
                      teamUno = 12;
-                    if (teamUno > teamDos) {
-                        winner.setText(teamOne + " is the winner!");
-                    }
-                    else if (teamDos > teamUno) {
-                        winner.setText(teamTwo + " is the winner!");
-                    }
+                    
                 }
-                if (teamTwo.contains("broncos")) {
+                else if (teamTwo.contains("broncos")) {
                      teamDos = 12;
-                    if (teamUno > teamDos) {
-                        winner.setText(teamOne + " is the winner!");
-                    }
-                    else if (teamDos > teamUno) {
-                        winner.setText(teamTwo + " is the winner!");
-                    }
+                    
                 }
-                if (teamOne.contains("titans")) {
+                else if (teamOne.contains("titans")) {
                      teamUno = 22;
-                    if (teamUno > teamDos) {
-                        winner.setText(teamOne + " is the winner!");
-                    }
-                    else if (teamDos > teamUno) {
-                        winner.setText(teamTwo + " is the winner!");
-                    }
+                    
                 }
-                if (teamTwo.contains("titans")) {
+                else if (teamTwo.contains("titans")) {
                      teamDos = 22;
-                    if (teamUno > teamDos) {
-                        winner.setText(teamOne + " is the winner!");
-                    }
-                    else if (teamDos > teamUno) {
-                        winner.setText(teamTwo + " is the winner!");
-                    }
+                    
                 }
-                if (teamOne.contains("colts")) {
+                else if (teamOne.contains("colts")) {
                      teamUno = 18;
-                    if (teamUno > teamDos) {
-                        winner.setText(teamOne + " is the winner!");
-                    }
-                    else if (teamDos > teamUno) {
-                        winner.setText(teamTwo + " is the winner!");
-                    }
+                    
                 }
-                if (teamTwo.contains("colts")) {
+                else if (teamTwo.contains("colts")) {
                      teamDos = 18;
-                    if (teamUno > teamDos) {
-                        winner.setText(teamOne + " is the winner!");
-                    }
-                    else if (teamDos > teamUno) {
-                        winner.setText(teamTwo + " is the winner!");
-                    }
+                    
                 }
-                if (teamOne.contains("texans")) {
+                else if (teamOne.contains("texans")) {
                      teamUno = 16;
-                    if (teamUno > teamDos) {
-                        winner.setText(teamOne + " is the winner!");
-                    }
-                    else if (teamDos > teamUno) {
-                        winner.setText(teamTwo + " is the winner!");
-                    }
+                    
                 }
-                if (teamTwo.contains("texans")) {
+                else if (teamTwo.contains("texans")) {
                      teamDos = 16;
-                    if (teamUno > teamDos) {
-                        winner.setText(teamOne + " is the winner!");
-                    }
-                    else if (teamDos > teamUno) {
-                        winner.setText(teamTwo + " is the winner!");
-                    }
+                    
                 }
-                if (teamOne.contains("jaguars")) {
+                else if (teamOne.contains("jaguars")) {
                      teamUno = 7;
-                    if (teamUno > teamDos) {
-                        winner.setText(teamOne + " is the winner!");
-                    }
-                    else if (teamDos > teamUno) {
-                        winner.setText(teamTwo + " is the winner!");
-                    }
+                    
                 }
-                if (teamTwo.contains("jaguars")) {
+                else if (teamTwo.contains("jaguars")) {
                      teamDos = 7;
-                    if (teamUno > teamDos) {
-                        winner.setText(teamOne + " is the winner!");
-                    }
-                    else if (teamDos > teamUno) {
-                        winner.setText(teamTwo + " is the winner!");
-                    }
+                    
                 }
-                if (teamOne.contains("packers")) {
+                else if (teamOne.contains("packers")) {
                      teamUno = 27;
-                    if (teamUno > teamDos) {
-                        winner.setText(teamOne + " is the winner!");
-                    }
-                    else if (teamDos > teamUno) {
-                        winner.setText(teamTwo + " is the winner!");
-                    }
+                    
                 }
-                if (teamTwo.contains("packers")) {
+                else if (teamTwo.contains("packers")) {
                      teamDos = 27;
-                    if (teamUno > teamDos) {
-                        winner.setText(teamOne + " is the winner!");
-                    }
-                    else if (teamDos > teamUno) {
-                        winner.setText(teamTwo + " is the winner!");
-                    }
+                    
                 }
-                if (teamOne.contains("bears")) {
+                else if (teamOne.contains("bears")) {
                      teamUno = 16;
-                    if (teamUno > teamDos) {
-                        winner.setText(teamOne + " is the winner!");
-                    }
-                    else if (teamDos > teamUno) {
-                        winner.setText(teamTwo + " is the winner!");
-                    }
+                    
                 }
-                if (teamTwo.contains("bears")) {
+                else if (teamTwo.contains("bears")) {
                      teamDos = 16;
-                    if (teamUno > teamDos) {
-                        winner.setText(teamOne + " is the winner!");
-                    }
-                    else if (teamDos > teamUno) {
-                        winner.setText(teamTwo + " is the winner!");
-                    }
+                    
                 }
-                if (teamOne.contains("vikings")) {
+                else if (teamOne.contains("vikings")) {
                      teamUno = 18;
-                    if (teamUno > teamDos) {
-                        winner.setText(teamOne + " is the winner!");
-                    }
-                    else if (teamDos > teamUno) {
-                        winner.setText(teamTwo + " is the winner!");
-                    }
+                    
                 }
-                if (teamTwo.contains("vikings")) {
+                else if (teamTwo.contains("vikings")) {
                      teamDos = 18;
-                    if (teamUno > teamDos) {
-                        winner.setText(teamOne + " is the winner!");
-                    }
-                    else if (teamDos > teamUno) {
-                        winner.setText(teamTwo + " is the winner!");
-                    }
+                    
                 }
-                if (teamOne.contains("lions")) {
+                else if (teamOne.contains("lions")) {
                      teamUno = 8;
-                    if (teamUno > teamDos) {
-                        winner.setText(teamOne + " is the winner!");
-                    }
-                    else if (teamDos > teamUno) {
-                        winner.setText(teamTwo + " is the winner!");
-                    }
+                    
                 }
-                if (teamTwo.contains("lions")) {
+                else if (teamTwo.contains("lions")) {
                      teamDos = 8;
-                    if (teamUno > teamDos) {
-                        winner.setText(teamOne + " is the winner!");
-                    }
-                    else if (teamDos > teamUno) {
-                        winner.setText(teamTwo + " is the winner!");
-                    }
+                    
                 }
-                if (teamOne.contains("49ers")) {
+                else if (teamOne.contains("49ers")) {
                      teamUno = 21;
-                    if (teamUno > teamDos) {
-                        winner.setText(teamOne + " is the winner!");
-                    }
-                    else if (teamDos > teamUno) {
-                        winner.setText(teamTwo + " is the winner!");
-                    }
+                    
                 }
-                if (teamTwo.contains("49ers")) {
+                else if (teamTwo.contains("49ers")) {
                      teamDos = 21;
-                    if (teamUno > teamDos) {
-                        winner.setText(teamOne + " is the winner!");
-                    }
-                    else if (teamDos > teamUno) {
-                        winner.setText(teamTwo + " is the winner!");
-                    }
+                    
                 }
-                if (teamOne.contains("seahawks")) {
+                else if (teamOne.contains("seahawks")) {
                      teamUno = 24;
-                    if (teamUno > teamDos) {
-                        winner.setText(teamOne + " is the winner!");
-                    }
-                    else if (teamDos > teamUno) {
-                        winner.setText(teamTwo + " is the winner!");
-                    }
+                    
                 }
-                if (teamTwo.contains("seahawks")) {
+                else if (teamTwo.contains("seahawks")) {
                      teamDos = 24;
-                    if (teamUno > teamDos) {
-                        winner.setText(teamOne + " is the winner!");
-                    }
-                    else if (teamDos > teamUno) {
-                        winner.setText(teamTwo + " is the winner!");
-                    }
+                    
                 }
-                if (teamOne.contains("cardinals")) {
+                else if (teamOne.contains("cardinals")) {
                      teamUno = 13;
-                    if (teamUno > teamDos) {
-                        winner.setText(teamOne + " is the winner!");
-                    }
-                    else if (teamDos > teamUno) {
-                        winner.setText(teamTwo + " is the winner!");
-                    }
+                    
                 }
-                if (teamTwo.contains("cardinals")) {
+                else if (teamTwo.contains("cardinals")) {
                      teamDos = 13;
-                    if (teamUno > teamDos) {
-                        winner.setText(teamOne + " is the winner!");
-                    }
-                    else if (teamDos > teamUno) {
-                        winner.setText(teamTwo + " is the winner!");
-                    }
+                    
                 }
-                if (teamOne.contains("rams")) {
+                else if (teamOne.contains("rams")) {
                      teamUno = 19;
-                    if (teamUno > teamDos) {
-                        winner.setText(teamOne + " is the winner!");
-                    }
-                    else if (teamDos > teamUno) {
-                        winner.setText(teamTwo + " is the winner!");
-                    }
+                    
                 }
-                if (teamTwo.contains("rams")) {
+                else if (teamTwo.contains("rams")) {
                      teamDos = 19;
-                    if (teamUno > teamDos) {
-                        winner.setText(teamOne + " is the winner!");
-                    }
-                    else if (teamDos > teamUno) {
-                        winner.setText(teamTwo + " is the winner!");
-                    }
+                    
                 }
-                if (teamOne.contains("sas")) {
+                else if (teamOne.contains("sas")) {
                      teamUno = 25;
-                    if (teamUno > teamDos) {
-                        winner.setText(teamOne + " is the winner!");
-                    }
-                    else if (teamDos > teamUno) {
-                        winner.setText(teamTwo + " is the winner!");
-                    }
+                    
                 }
-                if (teamTwo.contains("sas")) {
+                else if (teamTwo.contains("sas")) {
                      teamDos = 25;
-                    if (teamUno > teamDos) {
-                        winner.setText(teamOne + " is the winner!");
-                    }
-                    else if (teamDos > teamUno) {
-                        winner.setText(teamTwo + " is the winner!");
-                    }
+                    
                 }
-                if (teamOne.contains("panthers")) {
+                else if (teamOne.contains("panthers")) {
                      teamUno = 10;
-                    if (teamUno > teamDos) {
-                        winner.setText(teamOne + " is the winner!");
-                    }
-                    else if (teamDos > teamUno) {
-                        winner.setText(teamTwo + " is the winner!");
-                    }
+                    
                 }
-                if (teamTwo.contains("panthers")) {
+                else if (teamTwo.contains("panthers")) {
                      teamDos = 10;
-                    if (teamUno > teamDos) {
-                        winner.setText(teamOne + " is the winner!");
-                    }
-                    else if (teamDos > teamUno) {
-                        winner.setText(teamTwo + " is the winner!");
-                    }
+                    
                 }
-                if (teamOne.contains("buccaneers")) {
+                else if (teamOne.contains("buccaneers")) {
                      teamUno = 18;
-                    if (teamUno > teamDos) {
-                        winner.setText(teamOne + " is the winner!");
-                    }
-                    else if (teamDos > teamUno) {
-                        winner.setText(teamTwo + " is the winner!");
-                    }
+                    
                 }
-                if (teamTwo.contains("buccaneers")) {
+                else if (teamTwo.contains("buccaneers")) {
                      teamDos = 18;
-                    if (teamUno > teamDos) {
-                        winner.setText(teamOne + " is the winner!");
-                    }
-                    else if (teamDos > teamUno) {
-                        winner.setText(teamTwo + " is the winner!");
-                    }
+                    
                 }
-                if (teamOne.contains("falcons")) {
+                else if (teamOne.contains("falcons")) {
                      teamUno = 11;
-                    if (teamUno > teamDos) {
-                        winner.setText(teamOne + " is the winner!");
-                    }
-                    else if (teamDos > teamUno) {
-                        winner.setText(teamTwo + " is the winner!");
-                    }
+                    
                 }
-                if (teamTwo.contains("falcons")) {
+                else if (teamTwo.contains("falcons")) {
                      teamDos = 11;
-                    if (teamUno > teamDos) {
-                        winner.setText(teamOne + " is the winner!");
-                    }
-                    else if (teamDos > teamUno) {
-                        winner.setText(teamTwo + " is the winner!");
-                    }
+                    
                 }
-                if (teamOne.contains("Washington Football Team")) {
+                else if (teamOne.contains("Washington Football Team")) {
                      teamUno = 10;
-                    if (teamUno > teamDos) {
-                        winner.setText(teamOne + " is the winner!");
-                    }
-                    else if (teamDos > teamUno) {
-                        winner.setText(teamTwo + " is the winner!");
-                    }
+                    
                 }
-                if (teamTwo.contains("Washington Football Team")) {
+                else if (teamTwo.contains("Washington Football Team")) {
                      teamDos = 10;
-                    if (teamUno > teamDos) {
-                        winner.setText(teamOne + " is the winner!");
-                    }
-                    else if (teamDos > teamUno) {
-                        winner.setText(teamTwo + " is the winner!");
-                    }
+                    
                 }
-                if (teamOne.contains("giants")) {
+                else if (teamOne.contains("giants")) {
                      teamUno = 10;
-                    if (teamUno > teamDos) {
-                        winner.setText(teamOne + " is the winner!");
-                    }
-                    else if (teamDos > teamUno) {
-                        winner.setText(teamTwo + " is the winner!");
-                    }
+                    
                 }
-                if (teamTwo.contains("giants")) {
+                else if (teamTwo.contains("giants")) {
                      teamDos = 10;
-                    if (teamUno > teamDos) {
-                        winner.setText(teamOne + " is the winner!");
-                    }
-                    else if (teamDos > teamUno) {
-                        winner.setText(teamTwo + " is the winner!");
-                    }
+                    
                 }
-                if (teamOne.contains("cowboys")) {
+                else if (teamOne.contains("cowboys")) {
                      teamUno = 14;
-                    if (teamUno > teamDos) {
-                        winner.setText(teamOne + " is the winner!");
-                    }
-                    else if (teamDos > teamUno) {
-                        winner.setText(teamTwo + " is the winner!");
-                    }
+                    
                 }
-                if (teamTwo.contains("cowboys")) {
+                else if (teamTwo.contains("cowboys")) {
                      teamDos = 14;
-                    if (teamUno > teamDos) {
-                        winner.setText(teamOne + " is the winner!");
-                    }
-                    else if (teamDos > teamUno) {
-                        winner.setText(teamTwo + " is the winner!");
-                    }
+                    
                 }
-                if (teamOne.contains("eagles")) {
+                else if (teamOne.contains("eagles")) {
                      teamUno = 13;
-                    if (teamUno > teamDos) {
-                        winner.setText(teamOne + " is the winner!");
-                    }
-                    else if (teamDos > teamUno) {
-                        winner.setText(teamTwo + " is the winner!");
-                    }
+                    
                 }
-                if (teamTwo.contains("eagles")) {
+                else if (teamTwo.contains("eagles")) {
                      teamDos = 13;
-                    if (teamUno > teamDos) {
-                        winner.setText(teamOne + " is the winner!");
-                    }
-                    else if (teamDos > teamUno) {
-                        winner.setText(teamTwo + " is the winner!");
-                    }
+                    
                 }
 
 
- */
+ 
             }
 
         });
