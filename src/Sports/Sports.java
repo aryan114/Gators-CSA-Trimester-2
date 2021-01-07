@@ -9,10 +9,9 @@ import java.awt.event.ActionListener;
 public class Sports extends JFrame {
     private JLabel team1 = new JLabel();
     private JLabel team2 = new JLabel();
-    private JLabel winner = new JLabel();
-    private JButton calculate = new JButton();
     private JTextField team1entry = new JTextField();
     private JTextField team2entry = new JTextField();
+    private JLabel winner = new JLabel();
 
     public Sports() {
         getContentPane().setBackground(Color.CYAN);
@@ -21,31 +20,37 @@ public class Sports extends JFrame {
         getContentPane().setLayout(null);
 
         team1.setForeground(Color.white);
-        team2.setForeground(Color.white);
         team1.setHorizontalAlignment(SwingConstants.CENTER);
-        team2.setHorizontalAlignment(SwingConstants.CENTER);
+        team1.setFont(new Font("Times New Roman", Font.BOLD, 45));
         team1.setText("Enter your first team: ");
-        team2.setText("Enter your second team: ");
-        team1.setBounds(5,10,500,100);
-        team2.setBounds(5,105,500,100);
+        team1.setBounds(45,200,500,100);
         getContentPane().add(team1);
+
+        team2.setForeground(Color.white);
+        team2.setHorizontalAlignment(SwingConstants.CENTER);
+        team2.setFont(new Font("Times New Roman", Font.BOLD, 45));
+        team2.setText("Enter your second team: ");
+        team2.setBounds(65,350,500,100);
         getContentPane().add(team2);
-        
+
         winner.setForeground(Color.WHITE);
         winner.setHorizontalAlignment(SwingConstants.CENTER);
-        winner.setBounds(520,360,700,100);
+        winner.setFont(new Font("Times New Roman" , Font.BOLD, 45));
+        winner.setBounds(250,650,700,100);
         winner.setText("Winner: ");
         getContentPane().add(winner);
 
-        team1entry.setBounds(750,10,500,100);
+        team1entry.setBounds(750,200,500,100);
         team1entry.setForeground(Color.BLACK);
         getContentPane().add(team1entry);
 
-        team2entry.setBounds(750,120,500,100);
+        team2entry.setBounds(750,350,500,100);
         team2entry.setForeground(Color.BLACK);
         getContentPane().add(team2entry);
 
-        calculate.setBounds(520,270,700,75);
+
+        JButton calculate = new JButton("Calculate the Winner");
+        calculate.setBounds(750,500,500,100);
         calculate.setForeground(Color.blue);
         calculate.setBackground(Color.black);
         getContentPane().add(calculate);
@@ -55,274 +60,236 @@ public class Sports extends JFrame {
             public void actionPerformed(ActionEvent e) {
                 String teamOne = team1entry.getText();
                 String teamTwo = team2entry.getText();
+                int iFirstTeamWins = getWin(teamOne);
+                int iSecondTeamWins = getWin(teamTwo);
+                if (iFirstTeamWins > iSecondTeamWins) {
+                    winner.setText("The " + teamOne + " are the winner!");
+                } else if (iSecondTeamWins > iFirstTeamWins) {
+                    winner.setText("The " + teamTwo + " are the winner!");
+                } else if (iFirstTeamWins == iSecondTeamWins) {
+                    int iFirstTeamOverall = teamRating(teamOne);
+                    int iSecondTeamOverall = teamRating(teamTwo);
+                        if (iFirstTeamOverall > iSecondTeamOverall) {
+                            winner.setText("The " + teamOne + " are the winner!");
+                        }
+                        if (iSecondTeamOverall > iFirstTeamOverall) {
+                            winner.setText("The " + teamTwo + " are the winner!");
+                        }
+                }
+                
 
-
-                while (true) {
-                    if (teamOne.contains("ravens")) {
-                        int teamUno = 25;
-                    } else if (teamOne.contains("steelers")) {
-                        int teamUno = 20;
-                    } else if (teamOne.contains("browns")) {
-                        int teamUno = 17;
-                    } else if (teamOne.contains("bengals")) {
-                        int teamUno = 6;
-                    }
-                }
-
-                if (teamTwo.contains("ravens")) {
-                     teamDos = 25;
-                }
-                else if (teamTwo.contains("steelers")) {
-                     teamDos = 20;
-                    
-                }
-                else if (teamOne.contains("browns")) {
-                     teamUno = 17;
-                    
-                }
-                else if (teamTwo.contains("browns")) {
-                     teamDos = 17;
-                    
-                }
-                else if (teamOne.contains("bengals")) {
-                     teamUno = 6;
-                    
-                }
-                else if (teamTwo.contains("bengals")) {
-                     teamDos = 6;
-                    
-                }
-                else if (teamOne.contains("patriots")) {
-                     teamUno = 19;
-                    
-                }
-                else if (teamTwo.contains("patriots")) {
-                     teamDos = 19;
-                    
-                }
-                else if (teamOne.contains("bills")) {
-                     teamUno = 22;
-                    
-                }
-                else if (teamTwo.contains("bills")) {
-                     teamDos = 22;
-                    
-                }
-                else if (teamOne.contains("dolphins")) {
-                     teamUno = 15;
-                    
-                }
-                else if (teamTwo.contains("dolphins")) {
-                     teamDos = 15;
-                    
-                }
-                else if (teamOne.contains("jets")) {
-                     teamUno = 9;
-                    
-                }
-                else if (teamTwo.contains("jets")) {
-                     teamDos = 9;
-                    
-                }
-                else if (teamOne.contains("chiefs")) {
-                     teamUno = 29;
-                    
-                }
-                else if (teamTwo.contains("chiefs")) {
-                     teamDos = 29;
-                    
-                }
-                else if (teamOne.contains("chargers")) {
-                     teamUno = 12;
-                    
-                }
-                else if (teamTwo.contains("chargers")) {
-                     teamDos = 12;
-                    
-                }
-                else if (teamOne.contains("raiders")) {
-                     teamUno = 15;
-                    
-                }
-                else if (teamTwo.contains("raiders")) {
-                     teamDos = 15;
-                    
-                }
-                else if (teamOne.contains("broncos")) {
-                     teamUno = 12;
-                    
-                }
-                else if (teamTwo.contains("broncos")) {
-                     teamDos = 12;
-                    
-                }
-                else if (teamOne.contains("titans")) {
-                     teamUno = 22;
-                    
-                }
-                else if (teamTwo.contains("titans")) {
-                     teamDos = 22;
-                    
-                }
-                else if (teamOne.contains("colts")) {
-                     teamUno = 18;
-                    
-                }
-                else if (teamTwo.contains("colts")) {
-                     teamDos = 18;
-                    
-                }
-                else if (teamOne.contains("texans")) {
-                     teamUno = 16;
-                    
-                }
-                else if (teamTwo.contains("texans")) {
-                     teamDos = 16;
-                    
-                }
-                else if (teamOne.contains("jaguars")) {
-                     teamUno = 7;
-                    
-                }
-                else if (teamTwo.contains("jaguars")) {
-                     teamDos = 7;
-                    
-                }
-                else if (teamOne.contains("packers")) {
-                     teamUno = 27;
-                    
-                }
-                else if (teamTwo.contains("packers")) {
-                     teamDos = 27;
-                    
-                }
-                else if (teamOne.contains("bears")) {
-                     teamUno = 16;
-                    
-                }
-                else if (teamTwo.contains("bears")) {
-                     teamDos = 16;
-                    
-                }
-                else if (teamOne.contains("vikings")) {
-                     teamUno = 18;
-                    
-                }
-                else if (teamTwo.contains("vikings")) {
-                     teamDos = 18;
-                    
-                }
-                else if (teamOne.contains("lions")) {
-                     teamUno = 8;
-                    
-                }
-                else if (teamTwo.contains("lions")) {
-                     teamDos = 8;
-                    
-                }
-                else if (teamOne.contains("49ers")) {
-                     teamUno = 21;
-                    
-                }
-                else if (teamTwo.contains("49ers")) {
-                     teamDos = 21;
-                    
-                }
-                else if (teamOne.contains("seahawks")) {
-                     teamUno = 24;
-                    
-                }
-                else if (teamTwo.contains("seahawks")) {
-                     teamDos = 24;
-                    
-                }
-                else if (teamOne.contains("cardinals")) {
-                     teamUno = 13;
-                    
-                }
-                else if (teamTwo.contains("cardinals")) {
-                     teamDos = 13;
-                    
-                }
-                else if (teamOne.contains("rams")) {
-                     teamUno = 19;
-                    
-                }
-                else if (teamTwo.contains("rams")) {
-                     teamDos = 19;
-                    
-                }
-                else if (teamOne.contains("sas")) {
-                     teamUno = 25;
-                    
-                }
-                else if (teamTwo.contains("sas")) {
-                     teamDos = 25;
-                    
-                }
-                else if (teamOne.contains("panthers")) {
-                     teamUno = 10;
-                    
-                }
-                else if (teamTwo.contains("panthers")) {
-                     teamDos = 10;
-                    
-                }
-                else if (teamOne.contains("buccaneers")) {
-                     teamUno = 18;
-                    
-                }
-                else if (teamTwo.contains("buccaneers")) {
-                     teamDos = 18;
-                    
-                }
-                else if (teamOne.contains("falcons")) {
-                     teamUno = 11;
-                    
-                }
-                else if (teamTwo.contains("falcons")) {
-                     teamDos = 11;
-                    
-                }
-                else if (teamOne.contains("Washington Football Team")) {
-                     teamUno = 10;
-                    
-                }
-                else if (teamTwo.contains("Washington Football Team")) {
-                     teamDos = 10;
-                    
-                }
-                else if (teamOne.contains("giants")) {
-                     teamUno = 10;
-                    
-                }
-                else if (teamTwo.contains("giants")) {
-                     teamDos = 10;
-                    
-                }
-                else if (teamOne.contains("cowboys")) {
-                     teamUno = 14;
-                    
-                }
-                else if (teamTwo.contains("cowboys")) {
-                     teamDos = 14;
-                    
-                }
-                else if (teamOne.contains("eagles")) {
-                     teamUno = 13;
-                    
-                }
-                else if (teamTwo.contains("eagles")) {
-                     teamDos = 13;
-                    
-                }
-
-
- 
             }
-
         });
     }
+        public int getWin(String teamOfChoice) {
+            int wins = 0;
+            switch (teamOfChoice) {
+                case "ravens":
+                    wins = 25;
+                    break;
+                case "steelers":
+                    wins = 20;
+                    break;
+                case "browns":
+                    wins = 17;
+                    break;
+                case "bengals":
+                    wins = 6;
+                    break;
+                case "patriots":
+                    wins = 19;
+                    break;
+                case "bills":
+                    wins = 22;
+                    break;
+                case "jets":
+                    wins = 9;
+                    break;
+                case "dolphins":
+                    wins = 15;
+                    break;
+                case "chiefs":
+                    wins = 29;
+                    break;
+                case "chargers":
+                    wins = 12;
+                    break;
+                case "raiders":
+                    wins = 15;
+                    break;
+                case "broncos":
+                    wins = 12;
+                    break;
+                case "titans":
+                    wins = 22;
+                    break;
+                case "colts":
+                    wins = 18;
+                    break;
+                case "texans":
+                    wins = 16;
+                    break;
+                case "jaguars":
+                    wins = 7;
+                    break;
+                case "packers":
+                    wins = 27;
+                    break;
+                case "bears":
+                    wins = 16;
+                    break;
+                case "vikings":
+                    wins = 18;
+                    break;
+                case "lions":
+                    wins = 8;
+                    break;
+                case "49ers":
+                    wins = 21;
+                    break;
+                case "seahawks":
+                    wins = 24;
+                    break;
+                case "rams":
+                    wins = 19;
+                    break;
+                case "cardinals":
+                    wins = 13;
+                case "saints":
+                    wins = 25;
+                    break;
+                case "panthers":
+                    wins = 10;
+                    break;
+                case "buccaneers":
+                    wins = 18;
+                    break;
+                case "falcons":
+                    wins = 11;
+                    break;
+                case "giants":
+                    wins = 10;
+                    break;
+                case "cowboys":
+                    wins = 14;
+                    break;
+                case "eagles":
+                    wins = 13;
+                    break;
+                case "washington football team":
+                    wins = 10;
+                    break;
+                default:
+                    wins = 0;
+            }
+            return wins;
+
+        }
+    public int teamRating(String teamOfChoice) {
+        int overall = 0;
+        switch (teamOfChoice) {
+            case "ravens":
+                overall = 90;
+                break;
+            case "steelers":
+                overall = 86;
+                break;
+            case "browns":
+                overall = 81;
+                break;
+            case "bengals":
+                overall = 73;
+                break;
+            case "patriots":
+                overall = 78;
+                break;
+            case "bills":
+                overall = 89;
+                break;
+            case "jets":
+                overall = 65;
+                break;
+            case "dolphins":
+                overall = 81;
+                break;
+            case "chiefs":
+                overall = 89;
+                break;
+            case "chargers":
+                overall = 79;
+                break;
+            case "raiders":
+                overall = 80;
+                break;
+            case "broncos":
+                overall = 75;
+                break;
+            case "titans":
+                overall = 88;
+                break;
+            case "colts":
+                overall = 86;
+                break;
+            case "texans":
+                overall = 74;
+                break;
+            case "jaguars":
+                overall = 60;
+                break;
+            case "packers":
+                overall = 92;
+                break;
+            case "bears":
+                overall = 83;
+                break;
+            case "vikings":
+                overall = 80;
+                break;
+            case "lions":
+                overall = 71;
+                break;
+            case "49ers":
+                overall = 77;
+                break;
+            case "seahawks":
+                overall = 85;
+                break;
+            case "rams":
+                overall = 87;
+                break;
+            case "cardinals":
+                overall = 82;
+            case "saints":
+                overall = 89;
+                break;
+            case "panthers":
+                overall = 71;
+                break;
+            case "buccaneers":
+                overall = 86;
+                break;
+            case "falcons":
+                overall = 73;
+                break;
+            case "giants":
+                overall = 77;
+                break;
+            case "cowboys":
+                overall = 77;
+                break;
+            case "eagles":
+                overall = 77;
+                break;
+            case "washington football team":
+                overall = 79;
+                break;
+            default:
+                overall = 0;
+        }
+        return overall;
+
+    }
+
 
     public static void main(String[] args) {
         Sports menu = new Sports();
