@@ -6,14 +6,14 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-public class Sports extends JFrame {
+public class SportsBasketball extends JFrame {
     private JLabel team1 = new JLabel();
     private JLabel team2 = new JLabel();
     private JTextField team1entry = new JTextField();
     private JTextField team2entry = new JTextField();
     private JLabel winner = new JLabel();
 
-    public Sports() {
+    public SportsBasketball() {
         getContentPane().setBackground(Color.CYAN);
         setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         setBounds(300,300, 1300,400);
@@ -22,14 +22,14 @@ public class Sports extends JFrame {
         team1.setForeground(Color.white);
         team1.setHorizontalAlignment(SwingConstants.CENTER);
         team1.setFont(new Font("Times New Roman", Font.BOLD, 45));
-        team1.setText("Enter your first team: ");
+        team1.setText("Enter Your First Team: ");
         team1.setBounds(45,200,500,100);
         getContentPane().add(team1);
 
         team2.setForeground(Color.white);
         team2.setHorizontalAlignment(SwingConstants.CENTER);
         team2.setFont(new Font("Times New Roman", Font.BOLD, 45));
-        team2.setText("Enter your second team: ");
+        team2.setText("Enter Your Second Team: ");
         team2.setBounds(65,350,500,100);
         getContentPane().add(team2);
 
@@ -69,122 +69,122 @@ public class Sports extends JFrame {
                 } else if (iFirstTeamWins == iSecondTeamWins) {
                     int iFirstTeamOverall = teamRating(teamOne);
                     int iSecondTeamOverall = teamRating(teamTwo);
-                        if (iFirstTeamOverall > iSecondTeamOverall) {
-                            winner.setText("The " + teamOne + " are the winner!");
-                        }
-                        if (iSecondTeamOverall > iFirstTeamOverall) {
-                            winner.setText("The " + teamTwo + " are the winner!");
-                        }
+                    if (iFirstTeamOverall > iSecondTeamOverall) {
+                        winner.setText("The " + teamOne + " are the winner!");
+                    }
+                    if (iSecondTeamOverall > iFirstTeamOverall) {
+                        winner.setText("The " + teamTwo + " are the winner!");
+                    }
                 }
-                
+
 
             }
         });
     }
-        public int getWin(String teamOfChoice) {
-            int wins = 0;
-            switch (teamOfChoice) {
-                case "ravens":
-                    wins = 25;
-                    break;
-                case "steelers":
-                    wins = 20;
-                    break;
-                case "browns":
-                    wins = 17;
-                    break;
-                case "bengals":
-                    wins = 6;
-                    break;
-                case "patriots":
-                    wins = 19;
-                    break;
-                case "bills":
-                    wins = 22;
-                    break;
-                case "jets":
-                    wins = 9;
-                    break;
-                case "dolphins":
-                    wins = 15;
-                    break;
-                case "chiefs":
-                    wins = 29;
-                    break;
-                case "chargers":
-                    wins = 12;
-                    break;
-                case "raiders":
-                    wins = 15;
-                    break;
-                case "broncos":
-                    wins = 12;
-                    break;
-                case "titans":
-                    wins = 22;
-                    break;
-                case "colts":
-                    wins = 18;
-                    break;
-                case "texans":
-                    wins = 16;
-                    break;
-                case "jaguars":
-                    wins = 7;
-                    break;
-                case "packers":
-                    wins = 27;
-                    break;
-                case "bears":
-                    wins = 16;
-                    break;
-                case "vikings":
-                    wins = 18;
-                    break;
-                case "lions":
-                    wins = 8;
-                    break;
-                case "49ers":
-                    wins = 21;
-                    break;
-                case "seahawks":
-                    wins = 24;
-                    break;
-                case "rams":
-                    wins = 19;
-                    break;
-                case "cardinals":
-                    wins = 13;
-                case "saints":
-                    wins = 25;
-                    break;
-                case "panthers":
-                    wins = 10;
-                    break;
-                case "buccaneers":
-                    wins = 18;
-                    break;
-                case "falcons":
-                    wins = 11;
-                    break;
-                case "giants":
-                    wins = 10;
-                    break;
-                case "cowboys":
-                    wins = 14;
-                    break;
-                case "eagles":
-                    wins = 13;
-                    break;
-                case "washington football team":
-                    wins = 10;
-                    break;
-                default:
-                    wins = 0;
-            }
-            return wins;
-
+    public int getWin(String teamOfChoice) {
+        int wins = 0;
+        switch (teamOfChoice) {
+            case "bucks":
+                wins = 131;
+                break;
+            case "raptors":
+                wins = 134;
+                break;
+            case "celtics":
+                wins = 112;
+                break;
+            case "76ers":
+                wins = 101;
+                break;
+            case "pacers":
+                wins = 93;
+                break;
+            case "heat":
+                wins = 97;
+                break;
+            case "nets":
+                wins = 78;
+                break;
+            case "dolphins":
+                wins = 15;
+                break;
+            case "chiefs":
+                wins = 29;
+                break;
+            case "chargers":
+                wins = 12;
+                break;
+            case "raiders":
+                wins = 15;
+                break;
+            case "broncos":
+                wins = 12;
+                break;
+            case "titans":
+                wins = 22;
+                break;
+            case "colts":
+                wins = 18;
+                break;
+            case "texans":
+                wins = 16;
+                break;
+            case "jaguars":
+                wins = 7;
+                break;
+            case "packers":
+                wins = 27;
+                break;
+            case "bears":
+                wins = 16;
+                break;
+            case "vikings":
+                wins = 18;
+                break;
+            case "lions":
+                wins = 8;
+                break;
+            case "49ers":
+                wins = 21;
+                break;
+            case "seahawks":
+                wins = 24;
+                break;
+            case "rams":
+                wins = 19;
+                break;
+            case "cardinals":
+                wins = 13;
+            case "saints":
+                wins = 25;
+                break;
+            case "panthers":
+                wins = 10;
+                break;
+            case "buccaneers":
+                wins = 18;
+                break;
+            case "falcons":
+                wins = 11;
+                break;
+            case "giants":
+                wins = 10;
+                break;
+            case "cowboys":
+                wins = 14;
+                break;
+            case "eagles":
+                wins = 13;
+                break;
+            case "washington football team":
+                wins = 10;
+                break;
+            default:
+                wins = 0;
         }
+        return wins;
+
+    }
     public int teamRating(String teamOfChoice) {
         int overall = 0;
         switch (teamOfChoice) {
