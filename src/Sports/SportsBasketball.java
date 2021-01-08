@@ -7,11 +7,13 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 public class SportsBasketball extends JFrame {
-    private JLabel team1 = new JLabel();
-    private JLabel team2 = new JLabel();
-    private JTextField team1entry = new JTextField();
-    private JTextField team2entry = new JTextField();
-    private JLabel winner = new JLabel();
+    private JLabel teamUno = new JLabel();
+    private JLabel teamDos = new JLabel();
+    private JTextField team1UserEntry = new JTextField();
+    private JTextField team2UserEntry = new JTextField();
+    private JLabel winnerOfGame = new JLabel();
+    private JLabel currency = new JLabel();
+    private JTextField teamUserThinksIsWinner = new JTextField();
 
     public SportsBasketball() {
         getContentPane().setBackground(Color.CYAN);
@@ -19,35 +21,45 @@ public class SportsBasketball extends JFrame {
         setBounds(300,300, 1300,400);
         getContentPane().setLayout(null);
 
-        team1.setForeground(Color.white);
-        team1.setHorizontalAlignment(SwingConstants.CENTER);
-        team1.setFont(new Font("Times New Roman", Font.BOLD, 45));
-        team1.setText("Enter Your First Team: ");
-        team1.setBounds(45,200,500,100);
-        getContentPane().add(team1);
+        teamUno.setForeground(Color.white);
+        teamUno.setHorizontalAlignment(SwingConstants.CENTER);
+        teamUno.setFont(new Font("Times New Roman", Font.BOLD, 45));
+        teamUno.setText("Enter Your First Team: ");
+        teamUno.setBounds(45,200,500,100);
+        getContentPane().add(teamUno);
 
-        team2.setForeground(Color.white);
-        team2.setHorizontalAlignment(SwingConstants.CENTER);
-        team2.setFont(new Font("Times New Roman", Font.BOLD, 45));
-        team2.setText("Enter Your Second Team: ");
-        team2.setBounds(65,350,500,100);
-        getContentPane().add(team2);
+        teamDos.setForeground(Color.white);
+        teamDos.setHorizontalAlignment(SwingConstants.CENTER);
+        teamDos.setFont(new Font("Times New Roman", Font.BOLD, 45));
+        teamDos.setText("Enter your second team: ");
+        teamDos.setBounds(45,350,500,100);
+        getContentPane().add(teamDos);
 
-        winner.setForeground(Color.WHITE);
-        winner.setHorizontalAlignment(SwingConstants.CENTER);
-        winner.setFont(new Font("Times New Roman" , Font.BOLD, 45));
-        winner.setBounds(250,650,700,100);
-        winner.setText("Winner: ");
-        getContentPane().add(winner);
+        winnerOfGame.setForeground(Color.WHITE);
+        winnerOfGame.setHorizontalAlignment(SwingConstants.CENTER);
+        winnerOfGame.setFont(new Font("Times New Roman" , Font.BOLD, 45));
+        winnerOfGame.setBounds(250,650,700,100);
+        winnerOfGame.setText("Winner: ");
+        getContentPane().add(winnerOfGame);
 
-        team1entry.setBounds(750,200,500,100);
-        team1entry.setForeground(Color.BLACK);
-        getContentPane().add(team1entry);
+        currency.setForeground(Color.WHITE);
+        currency.setHorizontalAlignment(SwingConstants.CENTER);
+        currency.setFont(new Font("Times New Roman" , Font.BOLD, 45));
+        currency.setBounds(250,800,700,100);
+        currency.setText("Currency: ");
+        getContentPane().add(currency);
 
-        team2entry.setBounds(750,350,500,100);
-        team2entry.setForeground(Color.BLACK);
-        getContentPane().add(team2entry);
+        team1UserEntry.setBounds(750,200,500,100);
+        team1UserEntry.setForeground(Color.BLACK);
+        getContentPane().add(team1UserEntry);
 
+        team2UserEntry.setBounds(750,350,500,100);
+        team2UserEntry.setForeground(Color.BLACK);
+        getContentPane().add(team2UserEntry);
+
+        teamUserThinksIsWinner.setBounds(750,75,500,100);
+        teamUserThinksIsWinner.setForeground(Color.BLACK);
+        getContentPane().add(teamUserThinksIsWinner);
 
         JButton calculate = new JButton("Calculate the Winner");
         calculate.setBounds(750,500,500,100);
@@ -58,29 +70,65 @@ public class SportsBasketball extends JFrame {
         calculate.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                String teamOne = team1entry.getText();
-                String teamTwo = team2entry.getText();
-                int iFirstTeamWins = getWin(teamOne);
-                int iSecondTeamWins = getWin(teamTwo);
-                if (iFirstTeamWins > iSecondTeamWins) {
-                    winner.setText("The " + teamOne + " are the winner!");
-                } else if (iSecondTeamWins > iFirstTeamWins) {
-                    winner.setText("The " + teamTwo + " are the winner!");
-                } else if (iFirstTeamWins == iSecondTeamWins) {
-                    int iFirstTeamOverall = teamRating(teamOne);
-                    int iSecondTeamOverall = teamRating(teamTwo);
-                    if (iFirstTeamOverall > iSecondTeamOverall) {
-                        winner.setText("The " + teamOne + " are the winner!");
+                int totalCurrency = 0;
+                String userGuess = teamUserThinksIsWinner.getText();
+                String teamOne = team1UserEntry.getText();
+                String teamTwo = team2UserEntry.getText();
+                int iFirstTeamOverall = teamRating1(teamOne);
+                int iSecondTeamOverall = teamRating1(teamTwo);
+                if (iFirstTeamOverall > iSecondTeamOverall) {
+
+                    winnerOfGame.setText("The " + teamOne + " are the winner!");
+                    if (userGuess.equals(teamOne)) {
+                        totalCurrency = totalCurrency + 100;
+                        currency.setText("Your currency is: " + totalCurrency);
+                    } else if (!userGuess.equals(teamOne)) {
+                        totalCurrency = totalCurrency - 50;
+                        currency.setText("Your currency is: " + totalCurrency);
                     }
-                    if (iSecondTeamOverall > iFirstTeamOverall) {
-                        winner.setText("The " + teamTwo + " are the winner!");
+
+                } else if (iSecondTeamOverall > iFirstTeamOverall) {
+                    winnerOfGame.setText("The " + teamTwo + " are the winner!");
+                    if (userGuess.equals(teamTwo)) {
+                        totalCurrency = totalCurrency + 100;
+                        currency.setText("Your currency is: " + totalCurrency);
+                    } else if (!userGuess.equals(teamTwo)) {
+                        totalCurrency = totalCurrency - 50;
+                        currency.setText("Your currency is: " + totalCurrency);
+                    }
+
+                } else {
+                    int iFirstTeamWins = getWin(teamOne);
+                    int iSecondTeamWins = getWin(teamTwo);
+                    if (iFirstTeamWins > iSecondTeamWins) {
+                        winnerOfGame.setText("The " + teamOne + " are the winner!");
+                        if (userGuess.equals(teamOne)) {
+                            totalCurrency = totalCurrency + 100;
+                            currency.setText("Your currency is: " + totalCurrency);
+                        } else if (!userGuess.equals(teamOne)) {
+                            totalCurrency = totalCurrency - 50;
+                            currency.setText("Your currency is: " + totalCurrency);
+                        }
+                    }
+
+                    if (iSecondTeamWins > iFirstTeamWins) {
+                        winnerOfGame.setText("The " + teamTwo + " are the winner!");
+                        if (userGuess.equals(teamOne)) {
+                            totalCurrency = totalCurrency + 100;
+                            currency.setText("Your currency is: " + totalCurrency);
+                        } else if (!userGuess.equals(teamTwo)) {
+                            totalCurrency = totalCurrency - 50;
+                            currency.setText("Your currency is: " + totalCurrency);
+                        }
                     }
                 }
-
-
             }
         });
     }
+    public int getCurrency(String userChoice, String userTeam1, String userTeam2) {
+
+    }
+
     public int getWin(String teamOfChoice) {
         int wins = 0;
         switch (teamOfChoice) {
@@ -105,79 +153,73 @@ public class SportsBasketball extends JFrame {
             case "nets":
                 wins = 78;
                 break;
-            case "dolphins":
-                wins = 15;
+            case "magic":
+                wins = 77;
                 break;
-            case "chiefs":
-                wins = 29;
+            case "pistons":
+                wins = 61;
                 break;
-            case "chargers":
-                wins = 12;
+            case "hornets":
+                wins = 62;
                 break;
-            case "raiders":
-                wins = 15;
+            case "wizards":
+                wins = 57;
                 break;
-            case "broncos":
-                wins = 12;
+            case "hawks":
+                wins = 49;
                 break;
-            case "titans":
-                wins = 22;
+            case "bulls":
+                wins = 44;
                 break;
-            case "colts":
-                wins = 18;
+            case "knicks":
+                wins = 38;
                 break;
-            case "texans":
-                wins = 16;
+            case "cavaliers":
+                wins = 38;
                 break;
-            case "jaguars":
-                wins = 7;
+            case "lakers":
+                wins = 105;
                 break;
-            case "packers":
-                wins = 27;
+            case "clippers":
+                wins = 106;
                 break;
-            case "bears":
-                wins = 16;
+            case "nuggets":
+                wins = 116;
                 break;
-            case "vikings":
-                wins = 18;
+            case "rockets":
+                wins = 108;
                 break;
-            case "lions":
-                wins = 8;
+            case "jazz":
+                wins = 98;
                 break;
-            case "49ers":
-                wins = 21;
+            case "thunder":
+                wins = 97;
                 break;
-            case "seahawks":
-                wins = 24;
+            case "trail blazers":
+                wins = 97;
                 break;
-            case "rams":
-                wins = 19;
+            case "spurs":
+                wins = 83;
                 break;
-            case "cardinals":
-                wins = 13;
-            case "saints":
-                wins = 25;
+            case "mavericks":
+                wins = 78;
                 break;
-            case "panthers":
-                wins = 10;
+            case "kings":
+                wins = 70;
+            case "grizzlies":
+                wins = 67;
                 break;
-            case "buccaneers":
-                wins = 18;
+            case "timberwolves":
+                wins = 55;
                 break;
-            case "falcons":
-                wins = 11;
+            case "pelicans":
+                wins = 63;
                 break;
-            case "giants":
-                wins = 10;
+            case "suns":
+                wins = 53;
                 break;
-            case "cowboys":
-                wins = 14;
-                break;
-            case "eagles":
-                wins = 13;
-                break;
-            case "washington football team":
-                wins = 10;
+            case "warriors":
+                wins = 86;
                 break;
             default:
                 wins = 0;
@@ -185,103 +227,97 @@ public class SportsBasketball extends JFrame {
         return wins;
 
     }
-    public int teamRating(String teamOfChoice) {
+    public int teamRating1(String teamOfChoice) {
         int overall = 0;
         switch (teamOfChoice) {
-            case "ravens":
+            case "bucks":
                 overall = 90;
                 break;
-            case "steelers":
+            case "raptors":
                 overall = 86;
                 break;
-            case "browns":
-                overall = 81;
-                break;
-            case "bengals":
-                overall = 73;
-                break;
-            case "patriots":
-                overall = 78;
-                break;
-            case "bills":
-                overall = 89;
-                break;
-            case "jets":
-                overall = 65;
-                break;
-            case "dolphins":
-                overall = 81;
-                break;
-            case "chiefs":
-                overall = 93;
-                break;
-            case "chargers":
-                overall = 79;
-                break;
-            case "raiders":
-                overall = 80;
-                break;
-            case "broncos":
-                overall = 75;
-                break;
-            case "titans":
+            case "celtics":
                 overall = 88;
                 break;
-            case "colts":
+            case "76ers":
                 overall = 86;
                 break;
-            case "texans":
-                overall = 74;
+            case "pacers":
+                overall = 82;
                 break;
-            case "jaguars":
-                overall = 60;
-                break;
-            case "packers":
-                overall = 92;
-                break;
-            case "bears":
-                overall = 83;
-                break;
-            case "vikings":
-                overall = 80;
-                break;
-            case "lions":
-                overall = 71;
-                break;
-            case "49ers":
-                overall = 77;
-                break;
-            case "seahawks":
-                overall = 85;
-                break;
-            case "rams":
+            case "heat":
                 overall = 87;
                 break;
-            case "cardinals":
-                overall = 82;
-            case "saints":
-                overall = 89;
+            case "nets":
+                overall = 91;
                 break;
-            case "panthers":
+            case "magic":
+                overall = 77;
+                break;
+            case "pistons":
                 overall = 71;
                 break;
-            case "buccaneers":
-                overall = 86;
-                break;
-            case "falcons":
+            case "hornets":
                 overall = 73;
                 break;
-            case "giants":
-                overall = 77;
-                break;
-            case "cowboys":
-                overall = 77;
-                break;
-            case "eagles":
-                overall = 77;
-                break;
-            case "washington football team":
+            case "wizards":
                 overall = 79;
+                break;
+            case "hawks":
+                overall = 79;
+                break;
+            case "bulls":
+                overall = 71;
+                break;
+            case "knicks":
+                overall = 72;
+                break;
+            case "cavaliers":
+                overall = 74;
+                break;
+            case "lakers":
+                overall = 93;
+                break;
+            case "clippers":
+                overall = 91;
+                break;
+            case "nuggets":
+                overall = 92;
+                break;
+            case "rockets":
+                overall = 85;
+                break;
+            case "jazz":
+                overall = 88;
+                break;
+            case "thunder":
+                overall = 76;
+                break;
+            case "trail blazers":
+                overall = 86;
+                break;
+            case "spurs":
+                overall = 79;
+                break;
+            case "mavericks":
+                overall = 84;
+                break;
+            case "kings":
+                overall = 78;
+            case "grizzlies":
+                overall = 83;
+                break;
+            case "timberwolves":
+                overall = 74;
+                break;
+            case "pelicans":
+                overall = 80;
+                break;
+            case "suns":
+                overall = 80;
+                break;
+            case "warriors":
+                overall = 86;
                 break;
             default:
                 overall = 0;
@@ -291,8 +327,8 @@ public class SportsBasketball extends JFrame {
     }
 
     public static void main(String[] args) {
-        Sports menu = new Sports();
-        menu.setTitle("Welcome to the Sports Simulation");
+        SportsBasketball menu = new SportsBasketball();
+        menu.setTitle("Welcome to the Basketball Sports Simulation");
         menu.setVisible(true);
     }
 
