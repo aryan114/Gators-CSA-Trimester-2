@@ -18,6 +18,7 @@ public class Itemspage extends JFrame {
     String [] items = new String[]{"Apples", "Bannanas"};
     String [] price = new String[]{"$1.99", "$2.99"};
     List<String> arritems = Arrays.asList(items);
+    //double doubleitemprice = Double.parseDouble(itemprice);
     int index;
     String itemprice;
 
