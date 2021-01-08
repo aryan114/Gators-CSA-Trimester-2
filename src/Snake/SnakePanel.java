@@ -25,7 +25,7 @@ public class SnakePanel extends JPanel implements ActionListener{
     SnakePanel(){
         random = new Random();
         this.setPreferredSize(new Dimension(SCREEN_WIDTH,SCREEN_HEIGHT));
-        this.setBackground(Color.black);
+        this.setBackground(Color.white);
         this.setFocusable(true);
         this.addKeyListener(new MyKeyAdapter());
         startGame();
@@ -43,12 +43,12 @@ public class SnakePanel extends JPanel implements ActionListener{
     public void draw(Graphics g) {
 
         if(running) {
-            g.setColor(Color.red);
+            g.setColor(Color.blue);
             g.fillOval(appleX, appleY, UNIT_SIZE, UNIT_SIZE);
 
             for(int i = 0; i< bodyParts;i++) {
                 if(i == 0) {
-                    g.setColor(Color.green);
+                    g.setColor(Color.orange);
                     g.fillRect(x[i], y[i], UNIT_SIZE, UNIT_SIZE);
                 }
                 else {
@@ -58,7 +58,7 @@ public class SnakePanel extends JPanel implements ActionListener{
                 }
             }
             g.setColor(Color.red);
-            g.setFont( new Font("Ink Free",Font.BOLD, 40));
+            g.setFont( new Font("Times New Roman",Font.BOLD, 40));
             FontMetrics metrics = getFontMetrics(g.getFont());
             g.drawString("Score: "+applesEaten, (SCREEN_WIDTH - metrics.stringWidth("Score: "+applesEaten))/2, g.getFont().getSize());
         }
@@ -134,12 +134,12 @@ public class SnakePanel extends JPanel implements ActionListener{
     public void gameOver(Graphics g) {
         //Score
         g.setColor(Color.red);
-        g.setFont( new Font("Ink Free",Font.BOLD, 40));
+        g.setFont( new Font("Times New Roman",Font.BOLD, 40));
         FontMetrics metrics1 = getFontMetrics(g.getFont());
         g.drawString("Score: "+applesEaten, (SCREEN_WIDTH - metrics1.stringWidth("Score: "+applesEaten))/2, g.getFont().getSize());
         //Game Over text
         g.setColor(Color.red);
-        g.setFont( new Font("Ink Free",Font.BOLD, 75));
+        g.setFont( new Font("Times New Roman",Font.BOLD, 75));
         FontMetrics metrics2 = getFontMetrics(g.getFont());
         g.drawString("Game Over", (SCREEN_WIDTH - metrics2.stringWidth("Game Over"))/2, SCREEN_HEIGHT/2);
     }
