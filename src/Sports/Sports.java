@@ -9,8 +9,12 @@ import java.awt.event.ActionListener;
 public class Sports extends JFrame {
     private JLabel team1 = new JLabel();
     private JLabel team2 = new JLabel();
+    private JLabel teamGuess = new JLabel();
     private JTextField team1entry = new JTextField();
     private JTextField team2entry = new JTextField();
+    private JLabel currency = new JLabel();
+    private JTextField teamUserThinksIsWinner = new JTextField();
+    static int totalCurrency;
     private JLabel winner = new JLabel();
 
     public Sports() {
@@ -33,12 +37,26 @@ public class Sports extends JFrame {
         team2.setBounds(65,350,500,100);
         getContentPane().add(team2);
 
+        teamGuess.setForeground(Color.white);
+        teamGuess.setHorizontalAlignment(SwingConstants.CENTER);
+        teamGuess.setFont(new Font("Times New Roman", Font.BOLD, 27));
+        teamGuess.setText("Enter team you think will win: ");
+        teamGuess.setBounds(45,75,500,100);
+        getContentPane().add(teamGuess);
+
         winner.setForeground(Color.WHITE);
         winner.setHorizontalAlignment(SwingConstants.CENTER);
         winner.setFont(new Font("Times New Roman" , Font.BOLD, 45));
         winner.setBounds(250,650,700,100);
         winner.setText("Winner: ");
         getContentPane().add(winner);
+
+        currency.setForeground(Color.WHITE);
+        currency.setHorizontalAlignment(SwingConstants.CENTER);
+        currency.setFont(new Font("Times New Roman" , Font.BOLD, 45));
+        currency.setBounds(250,800,700,100);
+        currency.setText("Currency: ");
+        getContentPane().add(currency);
 
         team1entry.setBounds(750,200,500,100);
         team1entry.setForeground(Color.BLACK);
@@ -47,6 +65,10 @@ public class Sports extends JFrame {
         team2entry.setBounds(750,350,500,100);
         team2entry.setForeground(Color.BLACK);
         getContentPane().add(team2entry);
+
+        teamUserThinksIsWinner.setBounds(750,75,500,100);
+        teamUserThinksIsWinner.setForeground(Color.BLACK);
+        getContentPane().add(teamUserThinksIsWinner);
 
 
         JButton calculate = new JButton("Calculate the Winner");
@@ -58,26 +80,51 @@ public class Sports extends JFrame {
         calculate.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+                String userGuess = teamUserThinksIsWinner.getText();
                 String teamOne = team1entry.getText();
                 String teamTwo = team2entry.getText();
                 int iFirstTeamWins = getWin(teamOne);
                 int iSecondTeamWins = getWin(teamTwo);
                 if (iFirstTeamWins > iSecondTeamWins) {
                     winner.setText("The " + teamOne + " are the winner!");
+                    if (userGuess.equals(teamOne)) {
+                        totalCurrency += 100;
+                    } else {
+                        totalCurrency -= 50;
+                    }
+                    currency.setText("Your currency is: " + totalCurrency);
+
                 } else if (iSecondTeamWins > iFirstTeamWins) {
                     winner.setText("The " + teamTwo + " are the winner!");
+                    if (userGuess.equals(teamTwo)) {
+                        totalCurrency = totalCurrency + 100;
+                    } else {
+                        totalCurrency = totalCurrency - 50;
+                    }
+                    currency.setText("Your currency is: " + totalCurrency);
+
                 } else if (iFirstTeamWins == iSecondTeamWins) {
                     int iFirstTeamOverall = teamRating(teamOne);
                     int iSecondTeamOverall = teamRating(teamTwo);
                         if (iFirstTeamOverall > iSecondTeamOverall) {
                             winner.setText("The " + teamOne + " are the winner!");
+                            if (userGuess.equals(teamOne)) {
+                                totalCurrency += 100;
+                            } else {
+                                totalCurrency -= 50;
+                            }
+                            currency.setText("Your currency is: " + totalCurrency);
                         }
                         if (iSecondTeamOverall > iFirstTeamOverall) {
                             winner.setText("The " + teamTwo + " are the winner!");
+                            if (userGuess.equals(teamTwo)) {
+                                totalCurrency = totalCurrency + 100;
+                            } else {
+                                totalCurrency = totalCurrency - 50;
+                            }
+                            currency.setText("Your currency is: " + totalCurrency);
                         }
                 }
-                
-
             }
         });
     }

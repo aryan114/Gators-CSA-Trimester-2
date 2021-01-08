@@ -9,11 +9,13 @@ import java.awt.event.ActionListener;
 public class SportsBasketball extends JFrame {
     private JLabel teamUno = new JLabel();
     private JLabel teamDos = new JLabel();
+    private JLabel teamGuess = new JLabel();
     private JTextField team1UserEntry = new JTextField();
     private JTextField team2UserEntry = new JTextField();
     private JLabel winnerOfGame = new JLabel();
     private JLabel currency = new JLabel();
     private JTextField teamUserThinksIsWinner = new JTextField();
+    static int totalCurrency;
 
     public SportsBasketball() {
         getContentPane().setBackground(Color.CYAN);
@@ -34,6 +36,14 @@ public class SportsBasketball extends JFrame {
         teamDos.setText("Enter your second team: ");
         teamDos.setBounds(45,350,500,100);
         getContentPane().add(teamDos);
+
+        teamGuess.setForeground(Color.white);
+        teamGuess.setHorizontalAlignment(SwingConstants.CENTER);
+        teamGuess.setFont(new Font("Times New Roman", Font.BOLD, 27));
+        teamGuess.setText("Enter team you think will win: ");
+        teamGuess.setBounds(45,75,500,100);
+        getContentPane().add(teamGuess);
+
 
         winnerOfGame.setForeground(Color.WHITE);
         winnerOfGame.setHorizontalAlignment(SwingConstants.CENTER);
@@ -70,32 +80,28 @@ public class SportsBasketball extends JFrame {
         calculate.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                int totalCurrency = 0;
                 String userGuess = teamUserThinksIsWinner.getText();
                 String teamOne = team1UserEntry.getText();
                 String teamTwo = team2UserEntry.getText();
                 int iFirstTeamOverall = teamRating1(teamOne);
                 int iSecondTeamOverall = teamRating1(teamTwo);
                 if (iFirstTeamOverall > iSecondTeamOverall) {
-
                     winnerOfGame.setText("The " + teamOne + " are the winner!");
                     if (userGuess.equals(teamOne)) {
-                        totalCurrency = totalCurrency + 100;
-                        currency.setText("Your currency is: " + totalCurrency);
-                    } else if (!userGuess.equals(teamOne)) {
-                        totalCurrency = totalCurrency - 50;
-                        currency.setText("Your currency is: " + totalCurrency);
+                        totalCurrency += 100;
+                    } else {
+                        totalCurrency -= 50;
                     }
+                    currency.setText("Your currency is: " + totalCurrency);
 
                 } else if (iSecondTeamOverall > iFirstTeamOverall) {
                     winnerOfGame.setText("The " + teamTwo + " are the winner!");
                     if (userGuess.equals(teamTwo)) {
                         totalCurrency = totalCurrency + 100;
-                        currency.setText("Your currency is: " + totalCurrency);
-                    } else if (!userGuess.equals(teamTwo)) {
+                    } else {
                         totalCurrency = totalCurrency - 50;
-                        currency.setText("Your currency is: " + totalCurrency);
                     }
+                    currency.setText("Your currency is: " + totalCurrency);
 
                 } else {
                     int iFirstTeamWins = getWin(teamOne);
@@ -104,11 +110,10 @@ public class SportsBasketball extends JFrame {
                         winnerOfGame.setText("The " + teamOne + " are the winner!");
                         if (userGuess.equals(teamOne)) {
                             totalCurrency = totalCurrency + 100;
-                            currency.setText("Your currency is: " + totalCurrency);
-                        } else if (!userGuess.equals(teamOne)) {
+                        } else {
                             totalCurrency = totalCurrency - 50;
-                            currency.setText("Your currency is: " + totalCurrency);
                         }
+                        currency.setText("Your currency is: " + totalCurrency);
                     }
 
                     if (iSecondTeamWins > iFirstTeamWins) {
@@ -125,9 +130,9 @@ public class SportsBasketball extends JFrame {
             }
         });
     }
-    public int getCurrency(String userChoice, String userTeam1, String userTeam2) {
+    //public int getCurrency(String userChoice, String userTeam1, String userTeam2) {
 
-    }
+    //}
 
     public int getWin(String teamOfChoice) {
         int wins = 0;
