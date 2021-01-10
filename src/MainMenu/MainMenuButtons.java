@@ -9,6 +9,7 @@ import LoginSystem.Login;
 import LoginSystem.NewUser;
 import Snake.Snake;
 import Sports.Sports;
+import Sports.SportsMenu;
 
 import javax.swing.*;
 import javax.swing.border.MatteBorder;
@@ -68,7 +69,7 @@ public class MainMenuButtons extends JFrame {
         sportssim.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                Sports.main(null);
+                SportsMenu.main(null);
             }
         });
     }
