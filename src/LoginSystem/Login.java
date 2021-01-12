@@ -77,7 +77,7 @@ public class Login extends JFrame {
         loginstatus.setForeground(Color.WHITE);
         loginstatus.setFont(new Font("Lucida Grande", Font.BOLD, 15));
         loginstatus.setHorizontalAlignment(SwingConstants.LEFT);
-        loginstatus.setText("Testing Place Holder "); //Will be replaced with Login Message
+        loginstatus.setText(""); //Will be replaced with Login Message
         loginstatus.setBounds(5,250,500,20);
         getContentPane().add(loginstatus);
 //To make it look better, I'm going to try making the text-entry boxes have curved corners
@@ -136,13 +136,17 @@ public class Login extends JFrame {
 
                 ItemCollection<QueryOutcome> items = table.query(spec);
 
-                System.out.println("\nfindRepliesForAThread results:");
+                //System.out.println("\nfindRepliesForAThread results:");
 
                 Iterator<Item> iterator = items.iterator();
+
+
                 while (iterator.hasNext()) {
                     //System.out.println(iterator.next());
                     System.out.println(iterator.next().toJSONPretty());
                 }
+
+
 
 
                 if (username.equals("coderwithswag") && password.equals("Legit")) {
