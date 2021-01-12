@@ -72,6 +72,14 @@ public class MainMenuButtons extends JFrame {
                 SportsMenu.main(null);
             }
         });
+
+        JLabel labelattop = new JLabel("Earn money through activities to spend in the E-Commerce Store");
+        labelattop.setForeground(Color.white);
+        labelattop.setFont(new Font("Lucida Grande",Font.ITALIC,20));
+        labelattop.setHorizontalAlignment(SwingConstants.CENTER);
+        labelattop.setBounds(125,20,750,50);
+        getContentPane().add(labelattop);
+
     }
 
     public static void main(String[] args) {
