@@ -6,13 +6,11 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.util.*;
-
 
 public class Palindrome extends JFrame {
-    private JLabel userEntry;
-    private JLabel isPaliOrNo;
-    private JLabel enter;
+    private JTextField userEntry = new JTextField();
+    private JLabel isPaliOrNo = new JLabel();
+    private JLabel enterString = new JLabel();
 
     public Palindrome() {
         getContentPane().setBackground(new Color(0,204,255));
@@ -20,12 +18,12 @@ public class Palindrome extends JFrame {
         setBounds(300,300, 1300,400);
         getContentPane().setLayout(null);
 
-        enter.setForeground(Color.white);
-        enter.setHorizontalAlignment(SwingConstants.CENTER);
-        enter.setFont(new Font("Times New Roman", Font.BOLD, 45));
-        enter.setText("Enter Your String: ");
-        enter.setBounds(45,200,500,100);
-        getContentPane().add(enter);
+        enterString.setForeground(Color.white);
+        enterString.setHorizontalAlignment(SwingConstants.CENTER);
+        enterString.setFont(new Font("Times New Roman", Font.BOLD, 45));
+        enterString.setText("Enter Your String: ");
+        enterString.setBounds(45,200,500,100);
+        getContentPane().add(enterString);
 
         isPaliOrNo.setForeground(Color.WHITE);
         isPaliOrNo.setHorizontalAlignment(SwingConstants.CENTER);
