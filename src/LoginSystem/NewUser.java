@@ -82,8 +82,6 @@ public class NewUser extends JFrame {
 
                 System.out.println("New User");
 
-
-
             }
         });
     }
