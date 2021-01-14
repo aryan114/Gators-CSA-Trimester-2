@@ -1,5 +1,5 @@
 //Made by Pranav Kambhampati
-//File Works, but need to connect to AWS DynamoDB (removing credentials from table)
+//File Works
 
 
 package LoginSystem;
