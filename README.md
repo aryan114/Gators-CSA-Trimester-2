@@ -32,3 +32,8 @@ Goals Accomplished as a Team:
 * All of us are connected to AWS. Everyone is able to update/create/delete tables on DynamoDB.
 * Integrated project by adding everything to a main menu to make user navigation easier.
 * Updated Scrum Board with Issues and Labels - better organization and keeping track of tasks to do.
+
+Self-Score: 20/20 for being able to accomplish all the goals that were discussed at the beginning of the week.
+
+# Running the Login System
+
