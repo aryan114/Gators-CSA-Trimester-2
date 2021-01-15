@@ -8,12 +8,6 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-import MainMenu.MainMenuButtons;
-import Sports.Sports;
-import Sports.SportsBasketball;
-
-
-
 public class SportsMenu extends JFrame {
     public SportsMenu() {
         getContentPane().setBackground(Color.LIGHT_GRAY);
@@ -46,6 +40,20 @@ public class SportsMenu extends JFrame {
             @Override
             public void actionPerformed(ActionEvent e) {
                 SportsBasketball.main(null);
+            }
+        });
+
+        JButton baseball = new JButton("Baseball Simulation");
+        baseball.setBounds(125,500,350,350);
+        baseball.setForeground(Color.BLACK);
+        baseball.setBackground(Color.ORANGE);
+        baseball.setBorder(new MatteBorder(7,7,7,7,Color.WHITE));
+        baseball.setFont(new Font("Lucida Grande", Font.BOLD,25));
+        getContentPane().add(baseball);
+        baseball.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                SportsBaseball.main(null);
             }
         });
 

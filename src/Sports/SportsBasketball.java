@@ -18,7 +18,7 @@ public class SportsBasketball extends JFrame {
     static int totalCurrency;
 
     public SportsBasketball() {
-        getContentPane().setBackground(Color.CYAN);
+        getContentPane().setBackground(new Color(0,204,255));
         setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         setBounds(300,300, 1300,400);
         getContentPane().setLayout(null);
