@@ -45,3 +45,5 @@ Once you are connected, you should be able to add new users, delete them, and lo
 
 To run the login system, run the Login.java file.
 
+I also made a video to demo the Login System: https://www.loom.com/share/9e1f133dd24d49628e0ebea33b7ce6fe
+
