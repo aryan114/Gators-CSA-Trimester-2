@@ -35,6 +35,8 @@ Goals Accomplished as a Team:
 
 Self-Score: 20/20 for being able to accomplish all the goals that were discussed at the beginning of the week.
 
+[LINK](https://github.com/aryan114/Gators-CSA-Trimester-2/projects/1) to Scrum Board. There is a label on each card/issue indicating the person responsible for finishing that piece of code. If you click on the card, there are links to code and how to evaluate the card during runtime in the comments section for the cards in the "Done-Ready to Pull" section.
+
 #### Running the Login System
 Before running the login system, please use the credentials that I DM'd you on Slack to configure your IAM account so that the login system can connect to the DynamoDB database. This includes editing the config file and installing the AWS SDK. You can use this [LINK](https://docs.google.com/document/d/1_nTjbLF-sSyJ_rsqBOitQruEy1XE9M9vKYNZdZMdOWY/edit) to do that (stepts 9 to 14).
 
