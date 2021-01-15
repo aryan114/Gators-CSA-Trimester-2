@@ -39,5 +39,5 @@ Self-Score: 20/20 for being able to accomplish all the goals that were discussed
 Before running the login system, please use the credentials that I DM'd you on Slack to configure your IAM account so that the login system can connect to the DynamoDB database. This includes editing the config file and installing the AWS SDK. You can use this [LINK](https://docs.google.com/document/d/1_nTjbLF-sSyJ_rsqBOitQruEy1XE9M9vKYNZdZMdOWY/edit) to do that (stepts 9 to 14).
 
 I sent you your IAM credentials via Slack.
-
+Once you are connected, you should be able to add new users, delete them, and login with them. This activity will update in the DynamoDB table that is accessed by logging into the AWS website as an IAM User.
 
