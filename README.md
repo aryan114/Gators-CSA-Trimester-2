@@ -29,6 +29,6 @@ Link to Project Board (Scrum Board): [LINK](https://github.com/aryan114/Gators-C
 ### Self-Scoring For Week of 1/11
 
 Goals Accomplished as a Team:
-*All of us connected to the same AWS account
-*Integrated project by adding everything to a main menu
-*Updated Scrum Board with Issued and Labels - better organization and keeping track of tasks
+* All of us connected to the same AWS account
+* Integrated project by adding everything to a main menu
+* Updated Scrum Board with Issued and Labels - better organization and keeping track of tasks
