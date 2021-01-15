@@ -21,7 +21,7 @@ import java.awt.event.ActionListener;
 public class MainMenuButtons extends JFrame {
 
     public MainMenuButtons(){
-        getContentPane().setBackground(new Color(153,255,153));
+        getContentPane().setBackground(new Color(8, 151, 229));
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setBounds(150,25,1000,1000);
         //setContentPane(new JLabel(new ImageIcon("D:\\Java Projects\\out\\production\\TheGators-Trimester2-CSA\\src\\Images\\GatorsImage.png")));
