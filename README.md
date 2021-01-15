@@ -28,7 +28,7 @@ Link to Project Board (Scrum Board): [LINK](https://github.com/aryan114/Gators-C
 
 ### Self-Scoring For Week of 1/11
 
-Goals Accomplished as a Team:
+#### Goals Accomplished as a Team:
 * All of us are connected to AWS. Everyone is able to update/create/delete tables on DynamoDB.
 * Integrated project by adding everything to a main menu to make user navigation easier.
 * Updated Scrum Board with Issues and Labels - better organization and keeping track of tasks to do.
