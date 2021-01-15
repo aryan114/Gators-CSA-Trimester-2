@@ -15,11 +15,11 @@ public class Sports extends JFrame {
     private JTextField team2entry = new JTextField();
     private JLabel currency = new JLabel();
     private JTextField teamUserThinksIsWinner = new JTextField();
-    static int totalCurrency;
+    int totalCurrency;
     private JLabel winner = new JLabel();
 
     public Sports() {
-        getContentPane().setBackground(Color.CYAN);
+        getContentPane().setBackground(new Color(0,204,255));
         setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         setBounds(300,300, 1300,400);
         getContentPane().setLayout(null);
