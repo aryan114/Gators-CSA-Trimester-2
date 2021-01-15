@@ -47,3 +47,11 @@ To run the login system, run the Login.java file.
 
 I also made a video to demo the Login System: https://www.loom.com/share/9e1f133dd24d49628e0ebea33b7ce6fe
 
+
+
+#### Running the Sports Simulation - Aryan
+While running the sports simulation, please run the SportsMenu.java file. This will pull up a screen displaying the three different simulations (football NFL, basketball NBA, baseball MLB). Please put the team name, not city, and the name should be in lowercase letters. Choose the team that you think will win between two teams, and press the button and see who wins! You will also get currency.
+
+Video to demo the Sports Simulation: 
+
+
