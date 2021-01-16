@@ -8,7 +8,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.Arrays;
 import java.util.List;
-
+//
 public class Itemspage extends JFrame {
     private JTextField itementry = new JTextField();
     private JButton search = new JButton();
@@ -18,6 +18,7 @@ public class Itemspage extends JFrame {
     String [] items = new String[]{"Apples", "Bannanas"};
     String [] price = new String[]{"1.99", "2.99"};
     List<String> arritems = Arrays.asList(items);
+    //double doubleitemprice = Double.parseDouble(itemprice);
     int index;
     String itemprice;
     //double doubleitemprice = Double.parseDouble(itemprice);

@@ -1,5 +1,5 @@
 //Made by Pranav Kambhampati
-//File Works, but need to connect to AWS DynamoDB (Sending credentials to table)
+
 
 
 package LoginSystem;
@@ -17,8 +17,7 @@ import java.util.*;
 public class CredentialStore {
     private static CredentialStore single_instance = null;
     private static HashMap<String, String> userCredentials = null;
-    //Stack<String> usernames = new Stack<String>();
-    //Queue<String> passwords = new LinkedList<String>();
+
 
     //creates a singleton class to store the Hashmap which is going to be accessible by all the files (if called on)
     private CredentialStore() {
@@ -33,19 +32,7 @@ public class CredentialStore {
     public HashMap<String, String> getUserCredentials() {
         return userCredentials;
     }
-    /*
-    public void addstackusername(String arg){
-        usernames.add(arg);
-        System.out.println(usernames);
-    }
-     */
 
-    /*
-    public void addqueuepassword(String arg){
-        passwords.add(arg);
-        System.out.println(passwords);
-    }
-     */
 
 
     //These are the setters and getters for the hashamp. Since this file has data, it also has methods to control that data, like adding and removing stuff from hashmap
@@ -73,35 +60,28 @@ public class CredentialStore {
         //System.out.println("\nfindRepliesForAThread results:");
 
         Iterator<Item> iterator = items.iterator();
+
         while (iterator.hasNext()) {
-            System.out.println(iterator.next().toJSONPretty());
+           System.out.println(iterator.next().toJSONPretty());
         }
+
+
+
+
+
+
 
         if(items.getAccumulatedItemCount()==0){//How to check if the username equals null? I'm using the get method b/c items is an arraylist right?
             System.out.println("Adding a new item..."); //Indication that new items are being added
             PutItemOutcome outcome = table
                     .putItem(new Item().withPrimaryKey("userName", username).with( "password", password));//adds the items
             //.withMap("UserCredentials", userCredentials));
-            System.out.println("PutItem succeeded:\n" + outcome.getPutItemResult());
+            System.out.println("PutItem succeeded");
         }else{
             System.out.println("Duplicate Usernames");
         }
 
- /*
 
-        try {
-            System.out.println("Adding a new item..."); //Indication that new items are being added
-            PutItemOutcome outcome = table
-                    .putItem(new Item().withPrimaryKey("userName", username).with( "password", password));//adds the items
-            //.withMap("UserCredentials", userCredentials));
-            System.out.println("PutItem succeeded:\n" + outcome.getPutItemResult());
-        }
-        catch (Exception e) {
-            System.err.println("Unable to add item: " + username + " " + password);//un-necessary b/c it works but good to keep
-            System.err.println(e.getMessage());
-        }
-
- */
 
 
     }
@@ -117,9 +97,9 @@ public class CredentialStore {
                 .withPrimaryKey(new PrimaryKey("userName", userName,"password",password));
 
         table.deleteItem(deleteItemSpec);//deletes the item based on specified partition and sort key
+        System.out.println("Credentials deleted");
 
-                //withConditionExpression("info.rating <= :val")
-        //                .withValueMap(new ValueMap().withNumber(":val", 5.0));
+
     }
 
     public String getUserPassword(String userName) {

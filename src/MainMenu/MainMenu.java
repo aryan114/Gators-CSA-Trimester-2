@@ -8,7 +8,7 @@ package MainMenu;
 import javax.swing.*;
 
 import Eccomerce.Itemspage;
-import Snake.Snake;
+import Snake.SnakeGame;
 import Sports.Sports;
 import LoginSystem.*;
 import java.awt.image.BufferedImage;

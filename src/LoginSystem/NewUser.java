@@ -1,5 +1,5 @@
 //Made by Pranav Kambhampati
-//File Works, but need to connect to AWS DynamoDB (adding credentials to table)
+//File Works
 
 
 package LoginSystem;
@@ -80,9 +80,7 @@ public class NewUser extends JFrame {
                 //newuser.addqueuepassword(passtemp);
                 setVisible(false);
 
-                System.out.println("New User");
-
-
+                //System.out.println("New User");
 
             }
         });

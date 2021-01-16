@@ -26,27 +26,34 @@ Link to Project Board (Scrum Board): [LINK](https://github.com/aryan114/Gators-C
 
 
 
-### Self-Scoring For Week of 12/14
+### Self-Scoring For Week of 1/11
 
-Scores Document: [LINK](https://docs.google.com/document/d/1oFAnKWs5ejNb9_9eBUfHD7GJ7SrVmtfSk_sDv3WUNb8/edit)
+#### Goals Accomplished as a Team:
+* All of us are connected to AWS. Everyone is able to update/create/delete tables on DynamoDB.
+* Integrated project by adding everything to a main menu to make user navigation easier.
+* Updated Scrum Board with Issues and Labels - better organization and keeping track of tasks to do.
 
-Focus on creating individual games. Integration of projects will take place once all individual games are complete.
+Self-Score: 20/20 for being able to accomplish all the goals that were discussed at the beginning of the week.
 
-Pranav: 23/25
+[LINK](https://github.com/aryan114/Gators-CSA-Trimester-2/projects/1) to Scrum Board. There is a label on each card/issue indicating the person responsible for finishing that piece of code. If you click on the card, there are links to code and how to evaluate the card during runtime in the comments section for the cards in the "Done-Ready to Pull" section.
 
-Aryan: 23/25
+#### Running the Login System - Pranav 
+Before running the login system, please use the credentials that I DM'd you on Slack to configure your IAM account so that the login system can connect to the DynamoDB database. This includes editing the config file and installing the AWS SDK. You can use this [LINK](https://docs.google.com/document/d/1_nTjbLF-sSyJ_rsqBOitQruEy1XE9M9vKYNZdZMdOWY/edit) to do that (steps 9 to 14).
 
-Praveen: 23/25
+I sent you your IAM credentials via Slack.
+Once you are connected, you should be able to add new users, delete them, and login with them. This activity will update in the DynamoDB table that is accessed by logging into the [AWS website](https://signin.aws.amazon.com/) as an IAM User. Just as a general note, the DynamoDB table in which the credentials are stored is named "Credentials".
 
-Neil: 23/25
+To run the login system, run the Login.java file.
 
-| Member | Score |
-| --- | --- |
-| Pranav | **Critical Thinking**- I achieved coding goals (with hashmaps) and experimented with DynamoDB, but I need to spend more time on this. **Communications and Presentations**- I achieved goals from scrum board and added comments to communicate ideas with peers. **Collaboration**- I worked with Aryan on some AWS settings, and discussed with my team on what I need to do. **Creativity**- I worked with JFrames to make them look unique but I could have done more. **Self score: 19/20.**  |
-| Pranav Links | [**Experimenting with DynamoDB**](https://github.com/aryan114/Gators-CSA-Trimester-2/blob/d0a8258e0d7ab99feb4e2267d316e89d8d0357dd/src/Images/DynamoDB%20Table.JPG);; [**Finishing Set Goals**](https://github.com/aryan114/Gators-CSA-Trimester-2/projects/1);; [**Singleton Classes Experimentation**](https://github.com/aryan114/Gators-CSA-Trimester-2/blob/d0a8258e0d7ab99feb4e2267d316e89d8d0357dd/src/LoginSystem/CredentialStore.java#L18) **Scrum Master: 4/5.** Achieved 4Cs but could have done more to research AWS. |
-| Aryan |**Critical Thinking**- I made a main menu (w/out Snake Game due to some code issues) and JPanel for the sports simulation, will play around with database after break. Most time was spent brainstorming and thinking about the process. **Communcations and Presentations**- I contributed to the scrum board and communicated ideas with my team. **Collaboration**- I collaborated with Pranav on AWS technical difficulties and communicated project ideas to the team. **Creativity**- I tried to make the JFrames look nice, but I wasn't able to. **Self Score: 19/20.** |
-| Aryan Links | [**Main Menu Working**](https://github.com/aryan114/Gators-CSA-Trimester-2/blob/master/src/MainMenu/MainMenu.java#L1);; [**Sports JPanel created**](https://github.com/aryan114/Gators-CSA-Trimester-2/blob/master/src/Sports/Sports.java#L2) **Scrum Master: 4/5.** Hit 4Cs but didn't do enough in Sports Sim for last point. |
-| Praveen | **Critical Thinking**- I spent the week reasearching AWS since I'm new to databases. In addition, I started work on the JPanel for E-Commerce. **Communications and Presentations**- I helped Neil with the AP exam testing, and reviewed fundamentals that will be tested. **Collaboration**- I collaborated with Neil and helped him get started on his snake game. **Creativity**- My Jframes look unique, but I would have liked to have done more. **Self score: 19/20** |
-| Praveen Links | [**Items Store Homepage**](https://github.com/aryan114/Gators-CSA-Trimester-2/blob/master/src/Eccomerce/Itemspage.java);; [**Set goals for project**](https://github.com/aryan114/Gators-CSA-Trimester-2/projects/1);; [**Skimmed through AWS tutorial video**](https://www.youtube.com/watch?v=07YgaOfd1xA) **Scrum Master: 4/5.** Met 4Cs but didn't do enough in E-Commerce to blow away. |
-| Neil |**Critical Thinking**- I spent the week learning how to develop a snake game by following a tutorial which challenged my thinking. I tried to understand everything from the tutorial so that I could further my understanding of Java. I will personalize the game and add database connection next week **Communications and Presentations**- I helped Praveen with the AP Unit 3 FRQ and we worked together on the multiple choice and discussed the answers that we got and how we got them. **Collaboration**- I collaborated with Praveen and Pranav by setting up IAM and also through the AP Classroom FRQ. **Creativity**- My snake game works and it has colors, but I would like to personalize it a bit more. **Self score: 19/20**  |
-| Neil Links | [**Basic Snake Game Working**](https://github.com/aryan114/Gators-CSA-Trimester-2/blob/0c9ef2b8ad8e4db2d2f056f4de18bd5f0e8ffd4f/src/Snake/SnakePanel.java#L7) **Scrum Master: 4/5.** Hit 4Cs, but could have tried to do more without tutorial.|
+I also made a video to demo the Login System: https://www.loom.com/share/9e1f133dd24d49628e0ebea33b7ce6fe
+
+
+
+#### Running the Sports Simulation - Aryan
+While running the sports simulation, please run the SportsMenu.java file. This will pull up a screen displaying the three different simulations (football NFL, basketball NBA, baseball MLB). Please put the team name, not city, and the name should be in lowercase letters. Choose the team that you think will win between two teams, and press the button and see who wins! You will also get currency.
+
+#### My contributions in the Scrum Board: https://github.com/aryan114/Gators-CSA-Trimester-2/projects/1?card_filter_query=label%3Aaryan
+
+Video to demo the Sports Simulation: https://drive.google.com/file/d/1rx8_PSTii72JE5Ov1m0bqGPwinffwv3W/view?usp=sharing
+
+

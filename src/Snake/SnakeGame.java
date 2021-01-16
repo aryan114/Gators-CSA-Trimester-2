@@ -2,8 +2,8 @@ package Snake;
 
 import javax.swing.*;
 
-public class Snake extends JFrame {
-
+public class SnakeGame extends JFrame {
+//control
     public static void main(String[] args) {
         SnakeFrame menu = new SnakeFrame();
         menu.setTitle("Snake Game!");
