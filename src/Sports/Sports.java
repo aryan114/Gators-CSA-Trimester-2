@@ -1,5 +1,6 @@
 package Sports;
 // Made by Aryan Amberkar
+//
 
 import javax.swing.*;
 import java.awt.*;
@@ -14,11 +15,11 @@ public class Sports extends JFrame {
     private JTextField team2entry = new JTextField();
     private JLabel currency = new JLabel();
     private JTextField teamUserThinksIsWinner = new JTextField();
-    static int totalCurrency;
+    int totalCurrency;
     private JLabel winner = new JLabel();
 
     public Sports() {
-        getContentPane().setBackground(Color.CYAN);
+        getContentPane().setBackground(new Color(0,204,255));
         setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         setBounds(300,300, 1300,400);
         getContentPane().setLayout(null);
@@ -132,13 +133,13 @@ public class Sports extends JFrame {
             int wins = 0;
             switch (teamOfChoice) {
                 case "ravens":
-                    wins = 25;
+                    wins = 26;
                     break;
                 case "steelers":
                     wins = 20;
                     break;
                 case "browns":
-                    wins = 17;
+                    wins = 18;
                     break;
                 case "bengals":
                     wins = 6;
@@ -147,7 +148,7 @@ public class Sports extends JFrame {
                     wins = 19;
                     break;
                 case "bills":
-                    wins = 22;
+                    wins = 23;
                     break;
                 case "jets":
                     wins = 9;
@@ -198,18 +199,18 @@ public class Sports extends JFrame {
                     wins = 24;
                     break;
                 case "rams":
-                    wins = 19;
+                    wins = 20;
                     break;
                 case "cardinals":
                     wins = 13;
                 case "saints":
-                    wins = 25;
+                    wins = 26;
                     break;
                 case "panthers":
                     wins = 10;
                     break;
                 case "buccaneers":
-                    wins = 18;
+                    wins = 19;
                     break;
                 case "falcons":
                     wins = 11;
