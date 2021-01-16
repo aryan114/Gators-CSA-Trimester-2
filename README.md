@@ -58,3 +58,6 @@ Video to demo the Sports Simulation: https://drive.google.com/file/d/1rx8_PSTii7
 
 #### Running the Eccomerce website
 To run the eccomerce website, please run the Itemspage.java file. This will display a screen where you are able to type in any item that you want to buy. If the item is not in stock, then the button will say so. An attempt was made to make the eccomerce site work with AWS, but I wasn't able to quite finish it. Therfore, it is all commented out, but it should be done by next week.
+
+Contributions to Scum Board
+https://github.com/aryan114/Gators-CSA-Trimester-2/projects/1?card_filter_query=label%3Apraveen 
