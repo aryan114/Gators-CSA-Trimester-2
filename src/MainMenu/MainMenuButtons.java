@@ -7,7 +7,7 @@ package MainMenu;
 import Eccomerce.Itemspage;
 import LoginSystem.Login;
 import LoginSystem.NewUser;
-import Snake.Snake;
+import Snake.SnakeGame;
 import Sports.Sports;
 import Sports.SportsMenu;
 
@@ -54,7 +54,7 @@ public class MainMenuButtons extends JFrame {
         snakegame.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                Snake.main(null);
+                SnakeGame.main(null);
             }
         });
 
