@@ -4,8 +4,10 @@ import java.awt.event.*;
 import javax.swing.*;
 import java.util.Random;
 
+//view
 public class SnakePanel extends JPanel implements ActionListener{
-
+    //the variables that we need for the snake game
+    //intro to event based programming
     static final int SCREEN_WIDTH = 1300;
     static final int SCREEN_HEIGHT = 750;
     static final int UNIT_SIZE = 50;
@@ -41,11 +43,12 @@ public class SnakePanel extends JPanel implements ActionListener{
         draw(g);
     }
     public void draw(Graphics g) {
-
+    //paint method and how it works
+        // apple spawning
         if(running) {
             g.setColor(Color.blue);
             g.fillOval(appleX, appleY, UNIT_SIZE, UNIT_SIZE);
-
+            //avoids all of the snake body to be spawned on
             for(int i = 0; i< bodyParts;i++) {
                 if(i == 0) {
                     g.setColor(Color.orange);
@@ -68,6 +71,7 @@ public class SnakePanel extends JPanel implements ActionListener{
 
     }
     public void newApple(){
+        //randomization of the spawning of the x and y coordinates of the
         appleX = random.nextInt((int)(SCREEN_WIDTH/UNIT_SIZE))*UNIT_SIZE;
         appleY = random.nextInt((int)(SCREEN_HEIGHT/UNIT_SIZE))*UNIT_SIZE;
     }
@@ -145,7 +149,7 @@ public class SnakePanel extends JPanel implements ActionListener{
     }
     @Override
     public void actionPerformed(ActionEvent e) {
-
+        //event based programming
         if(running) {
             move();
             checkApple();
