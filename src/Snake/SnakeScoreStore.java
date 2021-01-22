@@ -1,5 +1,5 @@
 package Snake;
-/*
+
 import LoginSystem.CredentialStore;
 import com.amazonaws.client.builder.AwsClientBuilder;
 import com.amazonaws.services.dynamodbv2.AmazonDynamoDB;
@@ -12,7 +12,7 @@ import java.util.*;
 import java.util.HashMap;
 import java.util.Iterator;
 
-
+/*
 public class SnakeScoreStore {
 
     public static class SnakeScoreStoreSend {
@@ -71,4 +71,4 @@ public class SnakeScoreStore {
 
     }
 }
-/*
+*/
