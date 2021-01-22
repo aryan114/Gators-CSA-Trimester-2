@@ -1,5 +1,5 @@
 package Snake;
-
+/*
 import LoginSystem.CredentialStore;
 import com.amazonaws.client.builder.AwsClientBuilder;
 import com.amazonaws.services.dynamodbv2.AmazonDynamoDB;
@@ -12,7 +12,7 @@ import java.util.*;
 import java.util.HashMap;
 import java.util.Iterator;
 
-/*
+
 public class SnakeScoreStore {
 
     public static class SnakeScoreStoreSend {
@@ -37,7 +37,7 @@ public class SnakeScoreStore {
         }
 
 
-        //These are the setters and getters for the hashamp. Since this file has data, it also has methods to control that data, like adding and removing stuff from hashmap
+        //These are the setters and getters for the hashmap. Since this file has data, it also has methods to control that data, like adding and removing stuff from hashmap
         public void sendScore(HashMap<String, String> userCredentials) {
             this.snakeScore = userCredentials;
         }
@@ -55,7 +55,7 @@ public class SnakeScoreStore {
             Table table = dynamoDB.getTable("Credentials");
             //Creating an object of the table so that operations can be performed on it.
             QuerySpec spec = new QuerySpec().withKeyConditionExpression("userName= :v_username")
-                    .withValueMap(new ValueMap().withString(":v_username", snakeScore));
+                    .withValueMap(new ValueMap().withString(":v_username", String.valueOf(snakeScore)));
 
             ItemCollection<QueryOutcome> items = table.query(spec);
 
@@ -71,4 +71,4 @@ public class SnakeScoreStore {
 
     }
 }
-*/
+/*
