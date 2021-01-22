@@ -56,4 +56,14 @@ While running the sports simulation, please run the SportsMenu.java file. This w
 
 Video to demo the Sports Simulation: https://drive.google.com/file/d/1rx8_PSTii72JE5Ov1m0bqGPwinffwv3W/view?usp=sharing
 
+#### Running the Eccomerce website
+To run the eccomerce website, please run the Itemspage.java file. This will display a screen where you are able to type in any item that you want to buy. If the item is not in stock, then the button will say so. An attempt was made to make the eccomerce site work with AWS, but I wasn't able to quite finish it. Therfore, it is all commented out, but it should be done by next week.
 
+Contributions to Scum Board
+https://github.com/aryan114/Gators-CSA-Trimester-2/projects/1?card_filter_query=label%3Apraveen 
+
+#### Running the Snake Game - Neil
+To run the snake game, please run the SnakeGame.java file. This will display a screen where you have to fullscreen and then you will be loaded into a snake game automatically. Use the arrows keys to move around to collect the blue dots to see your score grow. This week, the snake game became connected to AWS but in order to not interfere with the table, it is all commented out, next week it should be fully done and all ready to send your high scores!.
+
+Contributions to Scum Board
+https://github.com/aryan114/Gators-CSA-Trimester-2/projects/1?card_filter_query=label%3Aneil 
