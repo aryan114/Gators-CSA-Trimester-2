@@ -18,11 +18,12 @@ public class Itemspage extends JFrame {
     String [] items = new String[]{"Apples", "Bannanas"};
     String [] price = new String[]{"1.99", "2.99"};
     List<String> arritems = Arrays.asList(items);
-    //double doubleitemprice = Double.parseDouble(itemprice);
+    Double [] doubleprice = new Double[]{1.99,2.99};
+    List<Double> listdoubleprice = Arrays.asList(doubleprice);
     int index;
     String itemprice;
-    //double doubleitemprice = Double.parseDouble(itemprice);
-    //int runningtotal;
+    double runningtotal = 0;
+    double numericalitemprice;
 
     public Itemspage() {
         getContentPane().setBackground(Color.WHITE);
@@ -62,10 +63,16 @@ public class Itemspage extends JFrame {
                     index = arritems.indexOf(itementry.getText());
                     itemprice = price[index];
                     checkout.setVisible(true);
+                    checkout.addActionListener(new ActionListener() {
+                        @Override
+                        public void actionPerformed(ActionEvent e) {
+                            numericalitemprice = doubleprice[index];
+                            runningtotal = runningtotal + numericalitemprice;
+                            System.out.println(runningtotal);
+                        }
+                    });
                     System.out.println(itementry.getText());
-                    checkout.setText(itementry.getText() + " " + "$" + itemprice);
-                    //runningtotal = runningtotal + doubleitemprice;
-
+                    checkout.setText(itementry.getText() + " " + "$" + itemprice + " Checkout!");
                 }
                 else{
                     checkout.setVisible(true);
